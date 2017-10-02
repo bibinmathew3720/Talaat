@@ -1,0 +1,551 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D0013BC91F8206120027BD20 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0013BC81F8206120027BD20 /* AppDelegate.m */; };
+		D0013BCC1F8206120027BD20 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0013BCB1F8206120027BD20 /* ViewController.m */; };
+		D0013BCF1F8206120027BD20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0013BCD1F8206120027BD20 /* Main.storyboard */; };
+		D0013BD11F8206120027BD20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0013BD01F8206120027BD20 /* Assets.xcassets */; };
+		D0013BD41F8206120027BD20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0013BD21F8206120027BD20 /* LaunchScreen.storyboard */; };
+		D0013BD71F8206120027BD20 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0013BD61F8206120027BD20 /* main.m */; };
+		D0013BE11F8206120027BD20 /* TalaatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0013BE01F8206120027BD20 /* TalaatTests.m */; };
+		D0013BEC1F8206120027BD20 /* TalaatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0013BEB1F8206120027BD20 /* TalaatUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D0013BDD1F8206120027BD20 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0013BBC1F8206120027BD20 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0013BC31F8206120027BD20;
+			remoteInfo = Talaat;
+		};
+		D0013BE81F8206120027BD20 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0013BBC1F8206120027BD20 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0013BC31F8206120027BD20;
+			remoteInfo = Talaat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D0013BC41F8206120027BD20 /* Talaat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Talaat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0013BC71F8206120027BD20 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D0013BC81F8206120027BD20 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D0013BCA1F8206120027BD20 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D0013BCB1F8206120027BD20 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D0013BCE1F8206120027BD20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D0013BD01F8206120027BD20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D0013BD31F8206120027BD20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D0013BD51F8206120027BD20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0013BD61F8206120027BD20 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D0013BDC1F8206120027BD20 /* TalaatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TalaatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0013BE01F8206120027BD20 /* TalaatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TalaatTests.m; sourceTree = "<group>"; };
+		D0013BE21F8206120027BD20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0013BE71F8206120027BD20 /* TalaatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TalaatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0013BEB1F8206120027BD20 /* TalaatUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TalaatUITests.m; sourceTree = "<group>"; };
+		D0013BED1F8206120027BD20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D0013BC11F8206120027BD20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0013BD91F8206120027BD20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0013BE41F8206120027BD20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D0013BBB1F8206120027BD20 = {
+			isa = PBXGroup;
+			children = (
+				D0013BC61F8206120027BD20 /* Talaat */,
+				D0013BDF1F8206120027BD20 /* TalaatTests */,
+				D0013BEA1F8206120027BD20 /* TalaatUITests */,
+				D0013BC51F8206120027BD20 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D0013BC51F8206120027BD20 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0013BC41F8206120027BD20 /* Talaat.app */,
+				D0013BDC1F8206120027BD20 /* TalaatTests.xctest */,
+				D0013BE71F8206120027BD20 /* TalaatUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0013BC61F8206120027BD20 /* Talaat */ = {
+			isa = PBXGroup;
+			children = (
+				D0013BC71F8206120027BD20 /* AppDelegate.h */,
+				D0013BC81F8206120027BD20 /* AppDelegate.m */,
+				D0013BCA1F8206120027BD20 /* ViewController.h */,
+				D0013BCB1F8206120027BD20 /* ViewController.m */,
+				D0013BCD1F8206120027BD20 /* Main.storyboard */,
+				D0013BD01F8206120027BD20 /* Assets.xcassets */,
+				D0013BD21F8206120027BD20 /* LaunchScreen.storyboard */,
+				D0013BD51F8206120027BD20 /* Info.plist */,
+				D0013BD61F8206120027BD20 /* main.m */,
+			);
+			path = Talaat;
+			sourceTree = "<group>";
+		};
+		D0013BDF1F8206120027BD20 /* TalaatTests */ = {
+			isa = PBXGroup;
+			children = (
+				D0013BE01F8206120027BD20 /* TalaatTests.m */,
+				D0013BE21F8206120027BD20 /* Info.plist */,
+			);
+			path = TalaatTests;
+			sourceTree = "<group>";
+		};
+		D0013BEA1F8206120027BD20 /* TalaatUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D0013BEB1F8206120027BD20 /* TalaatUITests.m */,
+				D0013BED1F8206120027BD20 /* Info.plist */,
+			);
+			path = TalaatUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D0013BC31F8206120027BD20 /* Talaat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0013BF01F8206120027BD20 /* Build configuration list for PBXNativeTarget "Talaat" */;
+			buildPhases = (
+				D0013BC01F8206120027BD20 /* Sources */,
+				D0013BC11F8206120027BD20 /* Frameworks */,
+				D0013BC21F8206120027BD20 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Talaat;
+			productName = Talaat;
+			productReference = D0013BC41F8206120027BD20 /* Talaat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D0013BDB1F8206120027BD20 /* TalaatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0013BF31F8206120027BD20 /* Build configuration list for PBXNativeTarget "TalaatTests" */;
+			buildPhases = (
+				D0013BD81F8206120027BD20 /* Sources */,
+				D0013BD91F8206120027BD20 /* Frameworks */,
+				D0013BDA1F8206120027BD20 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0013BDE1F8206120027BD20 /* PBXTargetDependency */,
+			);
+			name = TalaatTests;
+			productName = TalaatTests;
+			productReference = D0013BDC1F8206120027BD20 /* TalaatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D0013BE61F8206120027BD20 /* TalaatUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0013BF61F8206120027BD20 /* Build configuration list for PBXNativeTarget "TalaatUITests" */;
+			buildPhases = (
+				D0013BE31F8206120027BD20 /* Sources */,
+				D0013BE41F8206120027BD20 /* Frameworks */,
+				D0013BE51F8206120027BD20 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0013BE91F8206120027BD20 /* PBXTargetDependency */,
+			);
+			name = TalaatUITests;
+			productName = TalaatUITests;
+			productReference = D0013BE71F8206120027BD20 /* TalaatUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D0013BBC1F8206120027BD20 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = Talaat;
+				TargetAttributes = {
+					D0013BC31F8206120027BD20 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					D0013BDB1F8206120027BD20 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D0013BC31F8206120027BD20;
+					};
+					D0013BE61F8206120027BD20 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D0013BC31F8206120027BD20;
+					};
+				};
+			};
+			buildConfigurationList = D0013BBF1F8206120027BD20 /* Build configuration list for PBXProject "Talaat" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D0013BBB1F8206120027BD20;
+			productRefGroup = D0013BC51F8206120027BD20 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D0013BC31F8206120027BD20 /* Talaat */,
+				D0013BDB1F8206120027BD20 /* TalaatTests */,
+				D0013BE61F8206120027BD20 /* TalaatUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D0013BC21F8206120027BD20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0013BD41F8206120027BD20 /* LaunchScreen.storyboard in Resources */,
+				D0013BD11F8206120027BD20 /* Assets.xcassets in Resources */,
+				D0013BCF1F8206120027BD20 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0013BDA1F8206120027BD20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0013BE51F8206120027BD20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D0013BC01F8206120027BD20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0013BCC1F8206120027BD20 /* ViewController.m in Sources */,
+				D0013BD71F8206120027BD20 /* main.m in Sources */,
+				D0013BC91F8206120027BD20 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0013BD81F8206120027BD20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0013BE11F8206120027BD20 /* TalaatTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0013BE31F8206120027BD20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0013BEC1F8206120027BD20 /* TalaatUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D0013BDE1F8206120027BD20 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0013BC31F8206120027BD20 /* Talaat */;
+			targetProxy = D0013BDD1F8206120027BD20 /* PBXContainerItemProxy */;
+		};
+		D0013BE91F8206120027BD20 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0013BC31F8206120027BD20 /* Talaat */;
+			targetProxy = D0013BE81F8206120027BD20 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D0013BCD1F8206120027BD20 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0013BCE1F8206120027BD20 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D0013BD21F8206120027BD20 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0013BD31F8206120027BD20 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D0013BEE1F8206120027BD20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D0013BEF1F8206120027BD20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D0013BF11F8206120027BD20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Talaat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = TL.Talaat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D0013BF21F8206120027BD20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Talaat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = TL.Talaat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D0013BF41F8206120027BD20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TalaatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = TL.TalaatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Talaat.app/Talaat";
+			};
+			name = Debug;
+		};
+		D0013BF51F8206120027BD20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TalaatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = TL.TalaatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Talaat.app/Talaat";
+			};
+			name = Release;
+		};
+		D0013BF71F8206120027BD20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TalaatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = TL.TalaatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Talaat;
+			};
+			name = Debug;
+		};
+		D0013BF81F8206120027BD20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TalaatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = TL.TalaatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Talaat;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D0013BBF1F8206120027BD20 /* Build configuration list for PBXProject "Talaat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0013BEE1F8206120027BD20 /* Debug */,
+				D0013BEF1F8206120027BD20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0013BF01F8206120027BD20 /* Build configuration list for PBXNativeTarget "Talaat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0013BF11F8206120027BD20 /* Debug */,
+				D0013BF21F8206120027BD20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0013BF31F8206120027BD20 /* Build configuration list for PBXNativeTarget "TalaatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0013BF41F8206120027BD20 /* Debug */,
+				D0013BF51F8206120027BD20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0013BF61F8206120027BD20 /* Build configuration list for PBXNativeTarget "TalaatUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0013BF71F8206120027BD20 /* Debug */,
+				D0013BF81F8206120027BD20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D0013BBC1F8206120027BD20 /* Project object */;
+}
