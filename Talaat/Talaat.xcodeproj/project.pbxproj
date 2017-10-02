@@ -17,6 +17,7 @@
 		D0013BD71F8206120027BD20 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0013BD61F8206120027BD20 /* main.m */; };
 		D0013BE11F8206120027BD20 /* TalaatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0013BE01F8206120027BD20 /* TalaatTests.m */; };
 		D0013BEC1F8206120027BD20 /* TalaatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0013BEB1F8206120027BD20 /* TalaatUITests.m */; };
+		D0013C021F820CB40027BD20 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0013C011F820CB40027BD20 /* BaseViewController.m */; };
 		D526804615932666E0BA2CE1 /* libPods-Talaat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 21DA4FEEDC35833181563E88 /* libPods-Talaat.a */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,8 @@
 		D0013BE71F8206120027BD20 /* TalaatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TalaatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0013BEB1F8206120027BD20 /* TalaatUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TalaatUITests.m; sourceTree = "<group>"; };
 		D0013BED1F8206120027BD20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0013C001F820CB40027BD20 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		D0013C011F820CB40027BD20 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		E04A88479A5839F6E840A0AE /* libPods-TalaatTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TalaatTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E38251B3BEB262CE9E1BB105 /* Pods-TalaatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TalaatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TalaatTests/Pods-TalaatTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,6 +144,10 @@
 		D0013BC61F8206120027BD20 /* Talaat */ = {
 			isa = PBXGroup;
 			children = (
+				D0013BFB1F820C6A0027BD20 /* ViewControllers */,
+				D0013BF91F820C6A0027BD20 /* CustomViews */,
+				D0013BFC1F820C6A0027BD20 /* CustomCells */,
+				D0013BFA1F820C6A0027BD20 /* Helper */,
 				D0013BC71F8206120027BD20 /* AppDelegate.h */,
 				D0013BC81F8206120027BD20 /* AppDelegate.m */,
 				D0013BCA1F8206120027BD20 /* ViewController.h */,
@@ -170,6 +177,60 @@
 				D0013BED1F8206120027BD20 /* Info.plist */,
 			);
 			path = TalaatUITests;
+			sourceTree = "<group>";
+		};
+		D0013BF91F820C6A0027BD20 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		D0013BFA1F820C6A0027BD20 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		D0013BFB1F820C6A0027BD20 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D0013BFF1F820C9C0027BD20 /* BaseViewController */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D0013BFC1F820C6A0027BD20 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				D0013BFD1F820C6A0027BD20 /* CollectionViewCells */,
+				D0013BFE1F820C6A0027BD20 /* TableCells */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		D0013BFD1F820C6A0027BD20 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		D0013BFE1F820C6A0027BD20 /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TableCells;
+			sourceTree = "<group>";
+		};
+		D0013BFF1F820C9C0027BD20 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D0013C001F820CB40027BD20 /* BaseViewController.h */,
+				D0013C011F820CB40027BD20 /* BaseViewController.m */,
+			);
+			path = BaseViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -453,6 +514,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0013BCC1F8206120027BD20 /* ViewController.m in Sources */,
+				D0013C021F820CB40027BD20 /* BaseViewController.m in Sources */,
 				D0013BD71F8206120027BD20 /* main.m in Sources */,
 				D0013BC91F8206120027BD20 /* AppDelegate.m in Sources */,
 			);
