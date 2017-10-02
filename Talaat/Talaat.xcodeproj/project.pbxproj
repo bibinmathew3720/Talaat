@@ -64,6 +64,8 @@
 		D0013BED1F8206120027BD20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0013C001F820CB40027BD20 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		D0013C011F820CB40027BD20 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		D0013C031F820D510027BD20 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		D0013C061F820F040027BD20 /* Talaat-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Talaat-Prefix.pch"; sourceTree = "<group>"; };
 		E04A88479A5839F6E840A0AE /* libPods-TalaatTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TalaatTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E38251B3BEB262CE9E1BB105 /* Pods-TalaatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TalaatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TalaatTests/Pods-TalaatTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -144,6 +146,7 @@
 		D0013BC61F8206120027BD20 /* Talaat */ = {
 			isa = PBXGroup;
 			children = (
+				D0013C061F820F040027BD20 /* Talaat-Prefix.pch */,
 				D0013BFB1F820C6A0027BD20 /* ViewControllers */,
 				D0013BF91F820C6A0027BD20 /* CustomViews */,
 				D0013BFC1F820C6A0027BD20 /* CustomCells */,
@@ -189,6 +192,7 @@
 		D0013BFA1F820C6A0027BD20 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				D0013C031F820D510027BD20 /* Constants.h */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -681,6 +685,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Talaat/Talaat-Prefix.pch";
 				INFOPLIST_FILE = Talaat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TL.Talaat;
@@ -695,6 +700,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Talaat/Talaat-Prefix.pch";
 				INFOPLIST_FILE = Talaat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TL.Talaat;
