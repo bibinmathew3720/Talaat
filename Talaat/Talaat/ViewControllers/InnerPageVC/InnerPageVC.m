@@ -16,6 +16,19 @@
 
 -(void)initView{
     [super initView];
+    [self initialisation];
+}
+
+-(void)initialisation{
+    if(self.type == EventTypeNightLife){
+        self.titleLabel.text = @"NIGHTLIFE";
+    }
+    else if(self.type == EventTypeDine){
+        self.titleLabel.text = @"DINE";
+    }
+    else if (self.type == EventTypeNightLifeAndDine){
+        self.titleLabel.text = @"NIGHTLIFE & DINE";
+    }
 }
 
 - (void)didReceiveMemoryWarning {

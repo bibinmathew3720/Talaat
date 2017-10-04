@@ -51,12 +51,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xaw-xE-xlJ">
                                 <rect key="frame" x="0.0" y="577" width="375" height="60"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukd-7T-206">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukd-7T-206">
                                         <rect key="frame" x="10" y="2" width="355" height="56"/>
                                         <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="17"/>
                                         <state key="normal" title="NIGHTLIFE &amp; DINE">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="0NH-Ph-f5g" kind="show" id="Wnc-zD-1em"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -71,12 +74,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tf7-Fm-MEw">
                                 <rect key="frame" x="0.0" y="507" width="375" height="60"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCL-ud-RHX">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCL-ud-RHX">
                                         <rect key="frame" x="10" y="2" width="355" height="56"/>
                                         <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="17"/>
                                         <state key="normal" title="DINE">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="0NH-Ph-f5g" kind="show" id="25V-YH-PuI"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -97,7 +103,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="0NH-Ph-f5g" kind="show" id="6lS-bJ-yP1"/>
+                                            <segue destination="0NH-Ph-f5g" kind="show" id="rIN-Ey-N9q"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -210,4 +216,7 @@
         <image name="nightLifeTopImage" width="320" height="260"/>
         <image name="splashIcon" width="238" height="238"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="rIN-Ey-N9q"/>
+    </inferredMetricsTieBreakers>
 </document>

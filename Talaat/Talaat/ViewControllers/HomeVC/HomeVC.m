@@ -7,6 +7,7 @@
 //
 
 #import "HomeVC.h"
+#import "InnerPageVC.h"
 
 @interface HomeVC ()
 @property (weak, nonatomic) IBOutlet UIButton *nightLifeAndDineButton;
@@ -39,7 +40,16 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Button Actions
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    UIButton *button = (UIButton *)sender;
+    InnerPageVC *innerPage = (InnerPageVC *)segue.destinationViewController;
+    if(button.tag == 0)
+        innerPage.type = EventTypeNightLife;
+    else if (button.tag == 1)
+        innerPage.type = EventTypeDine;
+    else
+        innerPage.type = EventTypeNightLifeAndDine;
+}
 
 
 /*
