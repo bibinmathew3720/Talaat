@@ -10,7 +10,6 @@
 		6B7004C357FC181406219982 /* libPods-TalaatUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B07243AE2839143B0614F88F /* libPods-TalaatUITests.a */; };
 		A1C571B573510D2A821F3311 /* libPods-TalaatTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E04A88479A5839F6E840A0AE /* libPods-TalaatTests.a */; };
 		D0013BC91F8206120027BD20 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0013BC81F8206120027BD20 /* AppDelegate.m */; };
-		D0013BCC1F8206120027BD20 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0013BCB1F8206120027BD20 /* ViewController.m */; };
 		D0013BCF1F8206120027BD20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0013BCD1F8206120027BD20 /* Main.storyboard */; };
 		D0013BD11F8206120027BD20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0013BD01F8206120027BD20 /* Assets.xcassets */; };
 		D0013BD41F8206120027BD20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0013BD21F8206120027BD20 /* LaunchScreen.storyboard */; };
@@ -51,8 +50,6 @@
 		D0013BC41F8206120027BD20 /* Talaat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Talaat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0013BC71F8206120027BD20 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D0013BC81F8206120027BD20 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D0013BCA1F8206120027BD20 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D0013BCB1F8206120027BD20 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D0013BCE1F8206120027BD20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D0013BD01F8206120027BD20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0013BD31F8206120027BD20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -159,8 +156,6 @@
 				D0013BFA1F820C6A0027BD20 /* Helper */,
 				D0013BC71F8206120027BD20 /* AppDelegate.h */,
 				D0013BC81F8206120027BD20 /* AppDelegate.m */,
-				D0013BCA1F8206120027BD20 /* ViewController.h */,
-				D0013BCB1F8206120027BD20 /* ViewController.m */,
 				D0013BCD1F8206120027BD20 /* Main.storyboard */,
 				D0013BD01F8206120027BD20 /* Assets.xcassets */,
 				D0013BD21F8206120027BD20 /* LaunchScreen.storyboard */,
@@ -543,7 +538,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0013BCC1F8206120027BD20 /* ViewController.m in Sources */,
 				D0013C021F820CB40027BD20 /* BaseViewController.m in Sources */,
 				D01C365E1F85576D003CBB1D /* InnerPageVC.m in Sources */,
 				D0013BD71F8206120027BD20 /* main.m in Sources */,

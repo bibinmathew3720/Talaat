@@ -9,5 +9,7 @@
 #import "BaseViewController.h"
 
 @interface InnerPageVC : BaseViewController
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *topImageView;
 
 @end

@@ -158,7 +158,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backArrow" translatesAutoresizingMaskIntoConstraints="NO" id="6tM-xc-fAb">
-                                <rect key="frame" x="10" y="20" width="10" height="19"/>
+                                <rect key="frame" x="20" y="30" width="10" height="19"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFM-O8-Dox">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -170,14 +170,22 @@
                                     <action selector="backButtonAction:" destination="0NH-Ph-f5g" eventType="touchUpInside" id="tdY-Dz-pKY"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NIGHTLIFE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avG-kI-Cz7">
+                                <rect key="frame" x="144" y="29.5" width="86.5" height="20"/>
+                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="avG-kI-Cz7" firstAttribute="centerY" secondItem="6tM-xc-fAb" secondAttribute="centerY" id="8h1-HL-4qd"/>
                             <constraint firstItem="iP2-e0-ObO" firstAttribute="top" secondItem="BId-ik-fqp" secondAttribute="top" constant="-20" id="9lR-0d-6DN"/>
                             <constraint firstItem="iP2-e0-ObO" firstAttribute="leading" secondItem="BId-ik-fqp" secondAttribute="leading" id="CCZ-9E-HmL"/>
+                            <constraint firstItem="avG-kI-Cz7" firstAttribute="centerX" secondItem="BId-ik-fqp" secondAttribute="centerX" id="Dcr-eL-3ed"/>
                             <constraint firstItem="VFM-O8-Dox" firstAttribute="top" secondItem="BId-ik-fqp" secondAttribute="top" constant="-20" id="G2x-xl-t2n"/>
-                            <constraint firstItem="6tM-xc-fAb" firstAttribute="leading" secondItem="BId-ik-fqp" secondAttribute="leading" constant="10" id="STC-rt-8T1"/>
-                            <constraint firstItem="6tM-xc-fAb" firstAttribute="top" secondItem="BId-ik-fqp" secondAttribute="top" id="fgU-6X-Pa1"/>
+                            <constraint firstItem="6tM-xc-fAb" firstAttribute="leading" secondItem="BId-ik-fqp" secondAttribute="leading" constant="20" id="STC-rt-8T1"/>
+                            <constraint firstItem="6tM-xc-fAb" firstAttribute="top" secondItem="BId-ik-fqp" secondAttribute="top" constant="10" id="fgU-6X-Pa1"/>
                             <constraint firstItem="BId-ik-fqp" firstAttribute="trailing" secondItem="iP2-e0-ObO" secondAttribute="trailing" id="luS-bf-dOq"/>
                             <constraint firstItem="VFM-O8-Dox" firstAttribute="leading" secondItem="BId-ik-fqp" secondAttribute="leading" id="qUB-R8-e8e"/>
                         </constraints>
@@ -185,6 +193,10 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="titleLabel" destination="avG-kI-Cz7" id="Ir4-u0-cr8"/>
+                        <outlet property="topImageView" destination="iP2-e0-ObO" id="kuq-RZ-Xzj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jRN-yE-Hpu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
