@@ -153,18 +153,49 @@
                     <view key="view" contentMode="scaleToFill" id="cmB-B4-GVo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nightLifeTopImage" translatesAutoresizingMaskIntoConstraints="NO" id="iP2-e0-ObO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backArrow" translatesAutoresizingMaskIntoConstraints="NO" id="6tM-xc-fAb">
+                                <rect key="frame" x="10" y="20" width="10" height="19"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFM-O8-Dox">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3lX-zA-99y"/>
+                                    <constraint firstAttribute="width" constant="50" id="hMw-Ux-tDO"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="backButtonAction:" destination="0NH-Ph-f5g" eventType="touchUpInside" id="tdY-Dz-pKY"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iP2-e0-ObO" firstAttribute="top" secondItem="BId-ik-fqp" secondAttribute="top" constant="-20" id="9lR-0d-6DN"/>
+                            <constraint firstItem="iP2-e0-ObO" firstAttribute="leading" secondItem="BId-ik-fqp" secondAttribute="leading" id="CCZ-9E-HmL"/>
+                            <constraint firstItem="VFM-O8-Dox" firstAttribute="top" secondItem="BId-ik-fqp" secondAttribute="top" constant="-20" id="G2x-xl-t2n"/>
+                            <constraint firstItem="6tM-xc-fAb" firstAttribute="leading" secondItem="BId-ik-fqp" secondAttribute="leading" constant="10" id="STC-rt-8T1"/>
+                            <constraint firstItem="6tM-xc-fAb" firstAttribute="top" secondItem="BId-ik-fqp" secondAttribute="top" id="fgU-6X-Pa1"/>
+                            <constraint firstItem="BId-ik-fqp" firstAttribute="trailing" secondItem="iP2-e0-ObO" secondAttribute="trailing" id="luS-bf-dOq"/>
+                            <constraint firstItem="VFM-O8-Dox" firstAttribute="leading" secondItem="BId-ik-fqp" secondAttribute="leading" id="qUB-R8-e8e"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="BId-ik-fqp"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jRN-yE-Hpu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1607" y="-277"/>
+            <point key="canvasLocation" x="1605.5999999999999" y="-277.51124437781112"/>
         </scene>
     </scenes>
     <resources>
+        <image name="backArrow" width="10" height="19"/>
         <image name="homeBg" width="320" height="568"/>
         <image name="homeTopImage" width="320" height="349"/>
+        <image name="nightLifeTopImage" width="320" height="260"/>
         <image name="splashIcon" width="238" height="238"/>
     </resources>
 </document>
