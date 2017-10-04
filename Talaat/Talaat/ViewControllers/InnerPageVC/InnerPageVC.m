@@ -22,12 +22,15 @@
 -(void)initialisation{
     if(self.type == EventTypeNightLife){
         self.titleLabel.text = @"NIGHTLIFE";
+        self.topImageView.image = [UIImage imageNamed:@"nightLifeTopImage"];
     }
     else if(self.type == EventTypeDine){
         self.titleLabel.text = @"DINE";
+        self.topImageView.image = [UIImage imageNamed:@"dineTopImage"];
     }
     else if (self.type == EventTypeNightLifeAndDine){
         self.titleLabel.text = @"NIGHTLIFE & DINE";
+        self.topImageView.image = [UIImage imageNamed:@"nightLifeAnddDineImage"];
     }
 }
 
