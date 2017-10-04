@@ -19,6 +19,7 @@
 		D0013BEC1F8206120027BD20 /* TalaatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0013BEB1F8206120027BD20 /* TalaatUITests.m */; };
 		D0013C021F820CB40027BD20 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0013C011F820CB40027BD20 /* BaseViewController.m */; };
 		D01C36581F854F52003CBB1D /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D01C36571F854F52003CBB1D /* HomeVC.m */; };
+		D01C365E1F85576D003CBB1D /* InnerPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D01C365D1F85576D003CBB1D /* InnerPageVC.m */; };
 		D526804615932666E0BA2CE1 /* libPods-Talaat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 21DA4FEEDC35833181563E88 /* libPods-Talaat.a */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,8 @@
 		D0013C061F820F040027BD20 /* Talaat-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Talaat-Prefix.pch"; sourceTree = "<group>"; };
 		D01C36561F854F52003CBB1D /* HomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
 		D01C36571F854F52003CBB1D /* HomeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; };
+		D01C365C1F85576D003CBB1D /* InnerPageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InnerPageVC.h; sourceTree = "<group>"; };
+		D01C365D1F85576D003CBB1D /* InnerPageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InnerPageVC.m; sourceTree = "<group>"; };
 		E04A88479A5839F6E840A0AE /* libPods-TalaatTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TalaatTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E38251B3BEB262CE9E1BB105 /* Pods-TalaatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TalaatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TalaatTests/Pods-TalaatTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -205,6 +208,7 @@
 			children = (
 				D0013BFF1F820C9C0027BD20 /* BaseViewController */,
 				D01C36551F854F1B003CBB1D /* HomeVC */,
+				D01C365B1F855751003CBB1D /* InnerPageVC */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -248,6 +252,15 @@
 				D01C36571F854F52003CBB1D /* HomeVC.m */,
 			);
 			path = HomeVC;
+			sourceTree = "<group>";
+		};
+		D01C365B1F855751003CBB1D /* InnerPageVC */ = {
+			isa = PBXGroup;
+			children = (
+				D01C365C1F85576D003CBB1D /* InnerPageVC.h */,
+				D01C365D1F85576D003CBB1D /* InnerPageVC.m */,
+			);
+			path = InnerPageVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -532,6 +545,7 @@
 			files = (
 				D0013BCC1F8206120027BD20 /* ViewController.m in Sources */,
 				D0013C021F820CB40027BD20 /* BaseViewController.m in Sources */,
+				D01C365E1F85576D003CBB1D /* InnerPageVC.m in Sources */,
 				D0013BD71F8206120027BD20 /* main.m in Sources */,
 				D01C36581F854F52003CBB1D /* HomeVC.m in Sources */,
 				D0013BC91F8206120027BD20 /* AppDelegate.m in Sources */,
