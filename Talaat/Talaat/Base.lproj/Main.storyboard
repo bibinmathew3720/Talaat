@@ -182,17 +182,25 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ye1-ki-1xf">
+                                <rect key="frame" x="20" y="160" width="335" height="487"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ye1-ki-1xf" firstAttribute="top" secondItem="iP2-e0-ObO" secondAttribute="bottom" constant="-100" id="8QR-Pa-edG"/>
                             <constraint firstItem="avG-kI-Cz7" firstAttribute="centerY" secondItem="6tM-xc-fAb" secondAttribute="centerY" id="8h1-HL-4qd"/>
                             <constraint firstItem="iP2-e0-ObO" firstAttribute="top" secondItem="BId-ik-fqp" secondAttribute="top" constant="-20" id="9lR-0d-6DN"/>
                             <constraint firstItem="iP2-e0-ObO" firstAttribute="leading" secondItem="BId-ik-fqp" secondAttribute="leading" id="CCZ-9E-HmL"/>
                             <constraint firstItem="avG-kI-Cz7" firstAttribute="centerX" secondItem="BId-ik-fqp" secondAttribute="centerX" id="Dcr-eL-3ed"/>
+                            <constraint firstItem="BId-ik-fqp" firstAttribute="trailing" secondItem="ye1-ki-1xf" secondAttribute="trailing" constant="20" id="Fol-4d-3Hn"/>
                             <constraint firstItem="VFM-O8-Dox" firstAttribute="top" secondItem="BId-ik-fqp" secondAttribute="top" constant="-20" id="G2x-xl-t2n"/>
+                            <constraint firstItem="BId-ik-fqp" firstAttribute="bottom" secondItem="ye1-ki-1xf" secondAttribute="bottom" constant="20" id="HEH-WX-ugJ"/>
                             <constraint firstItem="6tM-xc-fAb" firstAttribute="leading" secondItem="BId-ik-fqp" secondAttribute="leading" constant="20" id="STC-rt-8T1"/>
                             <constraint firstItem="6tM-xc-fAb" firstAttribute="top" secondItem="BId-ik-fqp" secondAttribute="top" constant="10" id="fgU-6X-Pa1"/>
                             <constraint firstItem="BId-ik-fqp" firstAttribute="trailing" secondItem="iP2-e0-ObO" secondAttribute="trailing" id="luS-bf-dOq"/>
+                            <constraint firstItem="ye1-ki-1xf" firstAttribute="leading" secondItem="BId-ik-fqp" secondAttribute="leading" constant="20" id="pPe-DW-MUF"/>
                             <constraint firstItem="VFM-O8-Dox" firstAttribute="leading" secondItem="BId-ik-fqp" secondAttribute="leading" id="qUB-R8-e8e"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BId-ik-fqp"/>
