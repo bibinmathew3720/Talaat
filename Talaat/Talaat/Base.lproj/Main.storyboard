@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rkb-DP-63o">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,20 +9,144 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Kefa.ttf">
+            <string>Kefa-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="kma-iX-KMQ">
+            <objects>
+                <navigationController id="Rkb-DP-63o" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eLE-yE-Wtn">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8pF-Tt-zvA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YwR-ss-COh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-404" y="-421"/>
+        </scene>
+        <!--HomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeBg" translatesAutoresizingMaskIntoConstraints="NO" id="Di4-uW-SVb">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeTopImage" translatesAutoresizingMaskIntoConstraints="NO" id="QH0-l1-JgC">
+                                <rect key="frame" x="0.0" y="44" width="375" height="349"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splashIcon" translatesAutoresizingMaskIntoConstraints="NO" id="G9b-LI-xs9">
+                                <rect key="frame" x="68" y="99.5" width="238" height="238"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xaw-xE-xlJ">
+                                <rect key="frame" x="0.0" y="577" width="375" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukd-7T-206">
+                                        <rect key="frame" x="10" y="2" width="355" height="56"/>
+                                        <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="17"/>
+                                        <state key="normal" title="NIGHTLIFE &amp; DINE">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ukd-7T-206" secondAttribute="trailing" constant="10" id="3OE-Q9-SQo"/>
+                                    <constraint firstAttribute="bottom" secondItem="ukd-7T-206" secondAttribute="bottom" constant="2" id="7BZ-TV-HsU"/>
+                                    <constraint firstAttribute="height" constant="60" id="AMx-uK-0Vq"/>
+                                    <constraint firstItem="ukd-7T-206" firstAttribute="leading" secondItem="xaw-xE-xlJ" secondAttribute="leading" constant="10" id="n5l-u3-1lP"/>
+                                    <constraint firstItem="ukd-7T-206" firstAttribute="top" secondItem="xaw-xE-xlJ" secondAttribute="top" constant="2" id="x8X-9W-b1S"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tf7-Fm-MEw">
+                                <rect key="frame" x="0.0" y="507" width="375" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCL-ud-RHX">
+                                        <rect key="frame" x="10" y="2" width="355" height="56"/>
+                                        <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="17"/>
+                                        <state key="normal" title="DINE">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="JCL-ud-RHX" firstAttribute="leading" secondItem="Tf7-Fm-MEw" secondAttribute="leading" constant="10" id="EO1-oW-dng"/>
+                                    <constraint firstItem="JCL-ud-RHX" firstAttribute="top" secondItem="Tf7-Fm-MEw" secondAttribute="top" constant="2" id="Uz3-L8-Em3"/>
+                                    <constraint firstAttribute="bottom" secondItem="JCL-ud-RHX" secondAttribute="bottom" constant="2" id="i37-qJ-ipL"/>
+                                    <constraint firstAttribute="trailing" secondItem="JCL-ud-RHX" secondAttribute="trailing" constant="10" id="llo-in-phe"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4hl-75-aFM">
+                                <rect key="frame" x="0.0" y="437" width="375" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIm-Gu-85G">
+                                        <rect key="frame" x="10" y="2" width="355" height="56"/>
+                                        <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="17"/>
+                                        <state key="normal" title="NIGHTLIFE">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="gIm-Gu-85G" firstAttribute="leading" secondItem="4hl-75-aFM" secondAttribute="leading" constant="10" id="OcS-Ra-ndx"/>
+                                    <constraint firstItem="gIm-Gu-85G" firstAttribute="top" secondItem="4hl-75-aFM" secondAttribute="top" constant="2" id="YoQ-lq-KJO"/>
+                                    <constraint firstAttribute="bottom" secondItem="gIm-Gu-85G" secondAttribute="bottom" constant="2" id="aoE-cb-Bo3"/>
+                                    <constraint firstAttribute="trailing" secondItem="gIm-Gu-85G" secondAttribute="trailing" constant="10" id="l1p-vx-Ezx"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="G9b-LI-xs9" firstAttribute="centerY" secondItem="QH0-l1-JgC" secondAttribute="centerY" id="2Pf-UC-cYl"/>
+                            <constraint firstItem="4hl-75-aFM" firstAttribute="trailing" secondItem="Tf7-Fm-MEw" secondAttribute="trailing" id="5Qm-BW-EWw"/>
+                            <constraint firstItem="QH0-l1-JgC" firstAttribute="leading" secondItem="EWq-QF-Omt" secondAttribute="leading" id="7HS-pU-af1"/>
+                            <constraint firstItem="G9b-LI-xs9" firstAttribute="centerX" secondItem="QH0-l1-JgC" secondAttribute="centerX" id="8z2-wP-jub"/>
+                            <constraint firstItem="xaw-xE-xlJ" firstAttribute="top" secondItem="Tf7-Fm-MEw" secondAttribute="bottom" constant="10" id="GG6-Vs-J90"/>
+                            <constraint firstItem="Tf7-Fm-MEw" firstAttribute="trailing" secondItem="xaw-xE-xlJ" secondAttribute="trailing" id="GZJ-aZ-hg5"/>
+                            <constraint firstItem="EWq-QF-Omt" firstAttribute="bottom" secondItem="xaw-xE-xlJ" secondAttribute="bottom" constant="30" id="JDZ-ds-Naz"/>
+                            <constraint firstItem="EWq-QF-Omt" firstAttribute="bottom" secondItem="Di4-uW-SVb" secondAttribute="bottom" id="JcK-8Q-jwv"/>
+                            <constraint firstItem="Tf7-Fm-MEw" firstAttribute="height" secondItem="xaw-xE-xlJ" secondAttribute="height" id="LPq-dt-U3A"/>
+                            <constraint firstItem="EWq-QF-Omt" firstAttribute="trailing" secondItem="Di4-uW-SVb" secondAttribute="trailing" id="MyK-MB-0Ge"/>
+                            <constraint firstItem="Di4-uW-SVb" firstAttribute="leading" secondItem="EWq-QF-Omt" secondAttribute="leading" id="PgI-fP-Dtf"/>
+                            <constraint firstItem="4hl-75-aFM" firstAttribute="leading" secondItem="Tf7-Fm-MEw" secondAttribute="leading" id="RWg-fz-yaq"/>
+                            <constraint firstItem="4hl-75-aFM" firstAttribute="height" secondItem="Tf7-Fm-MEw" secondAttribute="height" id="TgI-AJ-10s"/>
+                            <constraint firstItem="Tf7-Fm-MEw" firstAttribute="top" secondItem="4hl-75-aFM" secondAttribute="bottom" constant="10" id="bau-9g-sXj"/>
+                            <constraint firstItem="Di4-uW-SVb" firstAttribute="top" secondItem="EWq-QF-Omt" secondAttribute="top" constant="-20" id="e31-fa-L9q"/>
+                            <constraint firstItem="QH0-l1-JgC" firstAttribute="top" secondItem="EWq-QF-Omt" secondAttribute="top" constant="-20" id="gOZ-d0-def"/>
+                            <constraint firstItem="EWq-QF-Omt" firstAttribute="trailing" secondItem="xaw-xE-xlJ" secondAttribute="trailing" id="kK0-Xf-ddG"/>
+                            <constraint firstItem="EWq-QF-Omt" firstAttribute="trailing" secondItem="QH0-l1-JgC" secondAttribute="trailing" id="rWK-I7-iQl"/>
+                            <constraint firstItem="Tf7-Fm-MEw" firstAttribute="leading" secondItem="xaw-xE-xlJ" secondAttribute="leading" id="tMF-lR-DFS"/>
+                            <constraint firstItem="xaw-xE-xlJ" firstAttribute="leading" secondItem="EWq-QF-Omt" secondAttribute="leading" id="uOX-gh-w13"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="EWq-QF-Omt"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Dai-Gh-gBW"/>
+                    <connections>
+                        <outlet property="dineButton" destination="JCL-ud-RHX" id="2b6-h1-rRY"/>
+                        <outlet property="nightLifeAndDineButton" destination="ukd-7T-206" id="RW1-1N-bOn"/>
+                        <outlet property="nightLifeButton" destination="gIm-Gu-85G" id="62l-ad-raN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="640.79999999999995" y="-384.55772113943033"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="homeBg" width="320" height="568"/>
+        <image name="homeTopImage" width="320" height="349"/>
+        <image name="splashIcon" width="238" height="238"/>
+    </resources>
 </document>
