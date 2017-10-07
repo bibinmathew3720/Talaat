@@ -19,6 +19,8 @@
 		D0013C021F820CB40027BD20 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0013C011F820CB40027BD20 /* BaseViewController.m */; };
 		D01C36581F854F52003CBB1D /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D01C36571F854F52003CBB1D /* HomeVC.m */; };
 		D01C365E1F85576D003CBB1D /* InnerPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D01C365D1F85576D003CBB1D /* InnerPageVC.m */; };
+		D037AFB71F899CC70033EF68 /* OfferCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D037AFB31F899CC70033EF68 /* OfferCell.m */; };
+		D037AFB81F899CC70033EF68 /* VenueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D037AFB61F899CC70033EF68 /* VenueCell.m */; };
 		D526804615932666E0BA2CE1 /* libPods-Talaat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 21DA4FEEDC35833181563E88 /* libPods-Talaat.a */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +71,10 @@
 		D01C36571F854F52003CBB1D /* HomeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; };
 		D01C365C1F85576D003CBB1D /* InnerPageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InnerPageVC.h; sourceTree = "<group>"; };
 		D01C365D1F85576D003CBB1D /* InnerPageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InnerPageVC.m; sourceTree = "<group>"; };
+		D037AFB21F899CC70033EF68 /* OfferCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfferCell.h; sourceTree = "<group>"; };
+		D037AFB31F899CC70033EF68 /* OfferCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfferCell.m; sourceTree = "<group>"; };
+		D037AFB51F899CC70033EF68 /* VenueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueCell.h; sourceTree = "<group>"; };
+		D037AFB61F899CC70033EF68 /* VenueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueCell.m; sourceTree = "<group>"; };
 		E04A88479A5839F6E840A0AE /* libPods-TalaatTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TalaatTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E38251B3BEB262CE9E1BB105 /* Pods-TalaatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TalaatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TalaatTests/Pods-TalaatTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -227,6 +233,7 @@
 		D0013BFE1F820C6A0027BD20 /* TableCells */ = {
 			isa = PBXGroup;
 			children = (
+				D037AFB01F899CC70033EF68 /* InnerPage */,
 			);
 			path = TableCells;
 			sourceTree = "<group>";
@@ -256,6 +263,33 @@
 				D01C365D1F85576D003CBB1D /* InnerPageVC.m */,
 			);
 			path = InnerPageVC;
+			sourceTree = "<group>";
+		};
+		D037AFB01F899CC70033EF68 /* InnerPage */ = {
+			isa = PBXGroup;
+			children = (
+				D037AFB11F899CC70033EF68 /* OfferCell */,
+				D037AFB41F899CC70033EF68 /* VenueCell */,
+			);
+			path = InnerPage;
+			sourceTree = "<group>";
+		};
+		D037AFB11F899CC70033EF68 /* OfferCell */ = {
+			isa = PBXGroup;
+			children = (
+				D037AFB21F899CC70033EF68 /* OfferCell.h */,
+				D037AFB31F899CC70033EF68 /* OfferCell.m */,
+			);
+			path = OfferCell;
+			sourceTree = "<group>";
+		};
+		D037AFB41F899CC70033EF68 /* VenueCell */ = {
+			isa = PBXGroup;
+			children = (
+				D037AFB51F899CC70033EF68 /* VenueCell.h */,
+				D037AFB61F899CC70033EF68 /* VenueCell.m */,
+			);
+			path = VenueCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -538,11 +572,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D037AFB71F899CC70033EF68 /* OfferCell.m in Sources */,
 				D0013C021F820CB40027BD20 /* BaseViewController.m in Sources */,
 				D01C365E1F85576D003CBB1D /* InnerPageVC.m in Sources */,
 				D0013BD71F8206120027BD20 /* main.m in Sources */,
 				D01C36581F854F52003CBB1D /* HomeVC.m in Sources */,
 				D0013BC91F8206120027BD20 /* AppDelegate.m in Sources */,
+				D037AFB81F899CC70033EF68 /* VenueCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
