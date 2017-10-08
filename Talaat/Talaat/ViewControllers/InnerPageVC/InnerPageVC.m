@@ -5,11 +5,16 @@
 //  Created by Bibin Mathew on 10/4/17.
 //  Copyright © 2017 Talaat. All rights reserved.
 //
-
+#import "OfferCell.h"
+#import "VenueCell.h"
 #import "InnerPageVC.h"
-
-@interface InnerPageVC ()
-
+typedef enum{
+    PageVenues,
+    PageOffers
+} PageType;
+@interface InnerPageVC ()<UITableViewDataSource,UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *innerTableView;
+@property (nonatomic, assign) PageType pageType;
 @end
 
 @implementation InnerPageVC
@@ -20,6 +25,9 @@
 }
 
 -(void)initialisation{
+    self.pageType = PageVenues;
+    self.innerTableView.estimatedRowHeight = 60;
+    self.innerTableView.rowHeight = UITableViewAutomaticDimension;
     if(self.type == EventTypeNightLife){
         self.titleLabel.text = @"NIGHTLIFE";
         self.topImageView.image = [UIImage imageNamed:@"nightLifeTopImage"];
@@ -38,12 +46,52 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 #pragma mark - Button Actions
 
 - (IBAction)backButtonAction:(UIButton *)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
+- (IBAction)venueButtonAction:(UIButton *)sender {
+    self.pageType = PageVenues;
+    [self.innerTableView reloadData];
+}
+
+- (IBAction)offerButtonAction:(UIButton *)sender {
+    self.pageType = PageOffers;
+    [self.innerTableView reloadData];
+}
+
 - (IBAction)phoneButtonAction:(UIButton *)sender {
+}
+
+#pragma mark - UITableView Datasources
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 10;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell;
+    if(self.pageType == PageOffers){
+        OfferCell *offCell= (OfferCell *)[tableView dequeueReusableCellWithIdentifier:@"offerCell" forIndexPath:indexPath];
+        cell= offCell;
+    }
+    else{
+         VenueCell *venueCell= (VenueCell *)[tableView dequeueReusableCellWithIdentifier:@"venueCell" forIndexPath:indexPath];
+         cell= venueCell;
+    }
+    return cell;
+}
+
+#pragma mark - UITableView Dalegates
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return UITableViewAutomaticDimension;
 }
 
 /*
