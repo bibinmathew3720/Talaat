@@ -25,6 +25,7 @@ typedef enum{
 -(void)initView{
     [super initView];
     [self initialisation];
+    [self callingGetAllVenuesApi];
 }
 
 -(void)initialisation{
@@ -107,6 +108,50 @@ typedef enum{
     if(self.pageType == PageVenues){
         
     }
+}
+
+#pragma mark - Get All Venues Api
+
+-(void)callingGetAllVenuesApi{
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    NSURL *url = [[UrlGenerator sharedHandler] urlForRequestType:TALAATURLTYPEGETALLVENUES withURLParameter:nil];
+    NetworkHandler *networkHandler = [[NetworkHandler alloc] initWithRequestUrl:url withBody:nil withMethodType:HTTPMethodPOST withHeaderFeild:nil];
+    [networkHandler startServieRequestWithSucessBlockSuccessBlock:^(id responseObject, int statusCode) {
+        NSLog(@"Response Objecte:%@",responseObject);
+        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+        if([[responseObject valueForKey:@"status"] isEqualToString:@"OK"]){
+           
+        }
+        else if([[responseObject valueForKey:@"status"] isEqualToString:@"ERROR"]){
+          
+        }
+        
+        
+    } FailureBlock:^(NSError *error, int statusCode, id errorResponseObject) {
+        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+//        [[Utilities sharedHandler]handleApiFailureBlockInController:self withErrorResponse:errorResponseObject andStatusCode:statusCode];
+    }];
+}
+
+-(void)callingGetAllOffersApi{
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    NSURL *url = [[UrlGenerator sharedHandler] urlForRequestType:TALAATURLTYPEGETALLOFFERS withURLParameter:nil];
+    NetworkHandler *networkHandler = [[NetworkHandler alloc] initWithRequestUrl:url withBody:nil withMethodType:HTTPMethodPOST withHeaderFeild:nil];
+    [networkHandler startServieRequestWithSucessBlockSuccessBlock:^(id responseObject, int statusCode) {
+        NSLog(@"Response Objecte:%@",responseObject);
+        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+        if([[responseObject valueForKey:@"status"] isEqualToString:@"OK"]){
+            
+        }
+        else if([[responseObject valueForKey:@"status"] isEqualToString:@"ERROR"]){
+            
+        }
+        
+        
+    } FailureBlock:^(NSError *error, int statusCode, id errorResponseObject) {
+        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+        //        [[Utilities sharedHandler]handleApiFailureBlockInController:self withErrorResponse:errorResponseObject andStatusCode:statusCode];
+    }];
 }
 
 /*

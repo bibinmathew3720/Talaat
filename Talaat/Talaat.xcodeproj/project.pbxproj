@@ -21,6 +21,11 @@
 		D01C365E1F85576D003CBB1D /* InnerPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D01C365D1F85576D003CBB1D /* InnerPageVC.m */; };
 		D037AFB71F899CC70033EF68 /* OfferCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D037AFB31F899CC70033EF68 /* OfferCell.m */; };
 		D037AFB81F899CC70033EF68 /* VenueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D037AFB61F899CC70033EF68 /* VenueCell.m */; };
+		D0E01CBF1F8A3EB0003FC8B1 /* NetworkHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E01CB51F8A3EB0003FC8B1 /* NetworkHandler.m */; };
+		D0E01CC01F8A3EB0003FC8B1 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E01CB81F8A3EB0003FC8B1 /* Reachability.m */; };
+		D0E01CC11F8A3EB0003FC8B1 /* RequestBodyGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E01CBA1F8A3EB0003FC8B1 /* RequestBodyGenerator.m */; };
+		D0E01CC21F8A3EB0003FC8B1 /* ResponseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E01CBC1F8A3EB0003FC8B1 /* ResponseHandler.m */; };
+		D0E01CC31F8A3EB0003FC8B1 /* UrlGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E01CBE1F8A3EB0003FC8B1 /* UrlGenerator.m */; };
 		D526804615932666E0BA2CE1 /* libPods-Talaat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 21DA4FEEDC35833181563E88 /* libPods-Talaat.a */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +80,16 @@
 		D037AFB31F899CC70033EF68 /* OfferCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfferCell.m; sourceTree = "<group>"; };
 		D037AFB51F899CC70033EF68 /* VenueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueCell.h; sourceTree = "<group>"; };
 		D037AFB61F899CC70033EF68 /* VenueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueCell.m; sourceTree = "<group>"; };
+		D0E01CB41F8A3EB0003FC8B1 /* NetworkHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkHandler.h; sourceTree = "<group>"; };
+		D0E01CB51F8A3EB0003FC8B1 /* NetworkHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkHandler.m; sourceTree = "<group>"; };
+		D0E01CB71F8A3EB0003FC8B1 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		D0E01CB81F8A3EB0003FC8B1 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		D0E01CB91F8A3EB0003FC8B1 /* RequestBodyGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestBodyGenerator.h; sourceTree = "<group>"; };
+		D0E01CBA1F8A3EB0003FC8B1 /* RequestBodyGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestBodyGenerator.m; sourceTree = "<group>"; };
+		D0E01CBB1F8A3EB0003FC8B1 /* ResponseHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponseHandler.h; sourceTree = "<group>"; };
+		D0E01CBC1F8A3EB0003FC8B1 /* ResponseHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponseHandler.m; sourceTree = "<group>"; };
+		D0E01CBD1F8A3EB0003FC8B1 /* UrlGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UrlGenerator.h; sourceTree = "<group>"; };
+		D0E01CBE1F8A3EB0003FC8B1 /* UrlGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UrlGenerator.m; sourceTree = "<group>"; };
 		E04A88479A5839F6E840A0AE /* libPods-TalaatTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TalaatTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E38251B3BEB262CE9E1BB105 /* Pods-TalaatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TalaatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TalaatTests/Pods-TalaatTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -199,6 +214,7 @@
 		D0013BFA1F820C6A0027BD20 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				D0E01CB31F8A3EB0003FC8B1 /* NetworkHandler */,
 				D0013C031F820D510027BD20 /* Constants.h */,
 			);
 			path = Helper;
@@ -290,6 +306,31 @@
 				D037AFB61F899CC70033EF68 /* VenueCell.m */,
 			);
 			path = VenueCell;
+			sourceTree = "<group>";
+		};
+		D0E01CB31F8A3EB0003FC8B1 /* NetworkHandler */ = {
+			isa = PBXGroup;
+			children = (
+				D0E01CB41F8A3EB0003FC8B1 /* NetworkHandler.h */,
+				D0E01CB51F8A3EB0003FC8B1 /* NetworkHandler.m */,
+				D0E01CB61F8A3EB0003FC8B1 /* Reachability */,
+				D0E01CB91F8A3EB0003FC8B1 /* RequestBodyGenerator.h */,
+				D0E01CBA1F8A3EB0003FC8B1 /* RequestBodyGenerator.m */,
+				D0E01CBB1F8A3EB0003FC8B1 /* ResponseHandler.h */,
+				D0E01CBC1F8A3EB0003FC8B1 /* ResponseHandler.m */,
+				D0E01CBD1F8A3EB0003FC8B1 /* UrlGenerator.h */,
+				D0E01CBE1F8A3EB0003FC8B1 /* UrlGenerator.m */,
+			);
+			path = NetworkHandler;
+			sourceTree = "<group>";
+		};
+		D0E01CB61F8A3EB0003FC8B1 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				D0E01CB71F8A3EB0003FC8B1 /* Reachability.h */,
+				D0E01CB81F8A3EB0003FC8B1 /* Reachability.m */,
+			);
+			path = Reachability;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -574,11 +615,16 @@
 			files = (
 				D037AFB71F899CC70033EF68 /* OfferCell.m in Sources */,
 				D0013C021F820CB40027BD20 /* BaseViewController.m in Sources */,
+				D0E01CC21F8A3EB0003FC8B1 /* ResponseHandler.m in Sources */,
 				D01C365E1F85576D003CBB1D /* InnerPageVC.m in Sources */,
+				D0E01CBF1F8A3EB0003FC8B1 /* NetworkHandler.m in Sources */,
 				D0013BD71F8206120027BD20 /* main.m in Sources */,
 				D01C36581F854F52003CBB1D /* HomeVC.m in Sources */,
 				D0013BC91F8206120027BD20 /* AppDelegate.m in Sources */,
+				D0E01CC01F8A3EB0003FC8B1 /* Reachability.m in Sources */,
 				D037AFB81F899CC70033EF68 /* VenueCell.m in Sources */,
+				D0E01CC11F8A3EB0003FC8B1 /* RequestBodyGenerator.m in Sources */,
+				D0E01CC31F8A3EB0003FC8B1 /* UrlGenerator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
