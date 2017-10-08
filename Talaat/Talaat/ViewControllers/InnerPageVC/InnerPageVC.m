@@ -15,6 +15,9 @@ typedef enum{
 @interface InnerPageVC ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *innerTableView;
 @property (nonatomic, assign) PageType pageType;
+@property (weak, nonatomic) IBOutlet UIView *venueUnderlineView;
+@property (weak, nonatomic) IBOutlet UIView *offerUnderLineView;
+@property (weak, nonatomic) IBOutlet UIView *contentView;
 @end
 
 @implementation InnerPageVC
@@ -53,11 +56,15 @@ typedef enum{
     [self.navigationController popViewControllerAnimated:YES];
 }
 - (IBAction)venueButtonAction:(UIButton *)sender {
+    self.venueUnderlineView.hidden = NO;
+    self.offerUnderLineView.hidden = YES;
     self.pageType = PageVenues;
     [self.innerTableView reloadData];
 }
 
 - (IBAction)offerButtonAction:(UIButton *)sender {
+    self.venueUnderlineView.hidden = YES;
+    self.offerUnderLineView.hidden = NO;
     self.pageType = PageOffers;
     [self.innerTableView reloadData];
 }
@@ -83,6 +90,7 @@ typedef enum{
     }
     else{
          VenueCell *venueCell= (VenueCell *)[tableView dequeueReusableCellWithIdentifier:@"venueCell" forIndexPath:indexPath];
+         venueCell.phoneButton.tag = indexPath.row;
          cell= venueCell;
     }
     return cell;
