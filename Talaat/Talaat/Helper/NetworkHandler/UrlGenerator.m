@@ -38,9 +38,9 @@
             break;
     }
     if([appendingUrl rangeOfString:@"%"].location != NSNotFound) {
-        return  [NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@",BaseUrl,appendingUrl]];
+        return  [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",BaseUrl,appendingUrl]];
     }
-    NSString *finalUrlString = [NSString stringWithFormat:@"%@%@%@",BaseUrl,appendingUrl];
+    NSString *finalUrlString = [NSString stringWithFormat:@"%@%@",BaseUrl,appendingUrl];
     NSString *escapedUrlString = [finalUrlString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
     return [NSURL URLWithString:escapedUrlString];
 }

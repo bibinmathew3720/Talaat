@@ -13,4 +13,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *offerHeadingLabel;
 @property (weak, nonatomic) IBOutlet UILabel *offerDetailLabel;
 
+@property (nonatomic, strong) id offerDetail;
 @end

@@ -12,4 +12,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *offerImageView;
 @property (weak, nonatomic) IBOutlet UILabel *venueHeadingLabel;
 @property (weak, nonatomic) IBOutlet UIButton *phoneButton;
+
+@property (nonatomic, strong) id venueDetail;
 @end

@@ -21,4 +21,9 @@
     // Configure the view for the selected state
 }
 
+-(void)setOfferDetail:(id)offerDetail{
+    self.offerHeadingLabel.text = [NSString stringWithFormat:@"%@",[offerDetail valueForKey:@"title"]];
+    self.offerDetailLabel.text = [NSString stringWithFormat:@"%@",[offerDetail valueForKey:@"description"]];
+}
+
 @end

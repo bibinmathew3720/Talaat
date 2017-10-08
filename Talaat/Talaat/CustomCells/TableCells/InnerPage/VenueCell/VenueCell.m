@@ -21,4 +21,8 @@
     // Configure the view for the selected state
 }
 
+-(void)setVenueDetail:(id)venueDetail{
+    self.venueHeadingLabel.text = [NSString stringWithFormat:@"%@",[venueDetail valueForKey:@"name"]];
+}
+
 @end

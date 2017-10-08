@@ -18,6 +18,9 @@ typedef enum{
 @property (weak, nonatomic) IBOutlet UIView *venueUnderlineView;
 @property (weak, nonatomic) IBOutlet UIView *offerUnderLineView;
 @property (weak, nonatomic) IBOutlet UIView *contentView;
+
+@property (nonatomic, strong) NSArray *venuesArray;
+@property (nonatomic, strong) NSArray *offersArray;
 @end
 
 @implementation InnerPageVC
@@ -61,6 +64,7 @@ typedef enum{
     self.offerUnderLineView.hidden = YES;
     self.pageType = PageVenues;
     [self.innerTableView reloadData];
+    [self callingGetAllVenuesApi];
 }
 
 - (IBAction)offerButtonAction:(UIButton *)sender {
@@ -68,6 +72,7 @@ typedef enum{
     self.offerUnderLineView.hidden = NO;
     self.pageType = PageOffers;
     [self.innerTableView reloadData];
+    [self callingGetAllOffersApi];
 }
 
 - (IBAction)phoneButtonAction:(UIButton *)sender {
@@ -81,18 +86,23 @@ typedef enum{
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    if(self.pageType == PageOffers)
+        return self.offersArray.count;
+    else
+        return self.venuesArray.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell;
     if(self.pageType == PageOffers){
         OfferCell *offCell= (OfferCell *)[tableView dequeueReusableCellWithIdentifier:@"offerCell" forIndexPath:indexPath];
+        offCell.offerDetail = [self.offersArray objectAtIndex:indexPath.row];
         cell= offCell;
     }
     else{
          VenueCell *venueCell= (VenueCell *)[tableView dequeueReusableCellWithIdentifier:@"venueCell" forIndexPath:indexPath];
          venueCell.phoneButton.tag = indexPath.row;
+         venueCell.venueDetail = [self.venuesArray objectAtIndex:indexPath.row];
          cell= venueCell;
     }
     return cell;
@@ -113,17 +123,18 @@ typedef enum{
 #pragma mark - Get All Venues Api
 
 -(void)callingGetAllVenuesApi{
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    if(self.venuesArray.count == 0)
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     NSURL *url = [[UrlGenerator sharedHandler] urlForRequestType:TALAATURLTYPEGETALLVENUES withURLParameter:nil];
     NetworkHandler *networkHandler = [[NetworkHandler alloc] initWithRequestUrl:url withBody:nil withMethodType:HTTPMethodPOST withHeaderFeild:nil];
     [networkHandler startServieRequestWithSucessBlockSuccessBlock:^(id responseObject, int statusCode) {
         NSLog(@"Response Objecte:%@",responseObject);
         [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
-        if([[responseObject valueForKey:@"status"] isEqualToString:@"OK"]){
-           
-        }
-        else if([[responseObject valueForKey:@"status"] isEqualToString:@"ERROR"]){
-          
+        if([[[responseObject valueForKey:@"result"] valueForKey:@"response"] isEqualToString:@"success"]){
+            self.venuesArray = [responseObject valueForKey:@"data"];
+            if(self.pageType == PageVenues){
+                [self.innerTableView reloadData];
+            }
         }
         
         
@@ -134,17 +145,18 @@ typedef enum{
 }
 
 -(void)callingGetAllOffersApi{
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    if(self.offersArray.count == 0)
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     NSURL *url = [[UrlGenerator sharedHandler] urlForRequestType:TALAATURLTYPEGETALLOFFERS withURLParameter:nil];
     NetworkHandler *networkHandler = [[NetworkHandler alloc] initWithRequestUrl:url withBody:nil withMethodType:HTTPMethodPOST withHeaderFeild:nil];
     [networkHandler startServieRequestWithSucessBlockSuccessBlock:^(id responseObject, int statusCode) {
         NSLog(@"Response Objecte:%@",responseObject);
         [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
-        if([[responseObject valueForKey:@"status"] isEqualToString:@"OK"]){
-            
-        }
-        else if([[responseObject valueForKey:@"status"] isEqualToString:@"ERROR"]){
-            
+        if([[[responseObject valueForKey:@"result"] valueForKey:@"response"] isEqualToString:@"success"]){
+            self.offersArray = [responseObject valueForKey:@"data"];
+            if(self.pageType == PageOffers){
+                [self.innerTableView reloadData];
+            }
         }
         
         
