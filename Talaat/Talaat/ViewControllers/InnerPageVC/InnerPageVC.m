@@ -70,6 +70,7 @@ typedef enum{
 }
 
 - (IBAction)phoneButtonAction:(UIButton *)sender {
+    NSLog(@"Index:%ld",sender.tag);
 }
 
 #pragma mark - UITableView Datasources
@@ -100,6 +101,12 @@ typedef enum{
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return UITableViewAutomaticDimension;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if(self.pageType == PageVenues){
+        
+    }
 }
 
 /*
