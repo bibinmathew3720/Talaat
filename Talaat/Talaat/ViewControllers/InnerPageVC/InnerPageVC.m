@@ -76,7 +76,10 @@ typedef enum{
 }
 
 - (IBAction)phoneButtonAction:(UIButton *)sender {
-    NSLog(@"Index:%ld",sender.tag);
+    id venueDetails  = [self.venuesArray objectAtIndex:sender.tag];
+    NSString *phoneNumberString = [NSString stringWithFormat:@"%@",[venueDetails valueForKey:@"phone"]];
+    NSString *phoneNumber = [@"tel://" stringByAppendingString:phoneNumberString];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneNumber]];
 }
 
 #pragma mark - UITableView Datasources
