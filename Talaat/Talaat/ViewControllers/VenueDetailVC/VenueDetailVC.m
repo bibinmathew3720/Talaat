@@ -9,6 +9,11 @@
 #import "VenueDetailVC.h"
 
 @interface VenueDetailVC ()
+@property (weak, nonatomic) IBOutlet UIView *infoUnderLineView;
+@property (weak, nonatomic) IBOutlet UIView *offerUndeLineView;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *phoneLabel;
+@property (weak, nonatomic) IBOutlet UILabel *venueDescriptionLabel;
 
 @end
 
@@ -22,6 +27,17 @@
 -(void)initialisation{
     
 }
+
+#pragma mark - Button Actions
+
+- (IBAction)backButtonAction:(UIButton *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+- (IBAction)infoButtonAction:(UIButton *)sender {
+}
+- (IBAction)offersButtonAction:(UIButton *)sender {
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
