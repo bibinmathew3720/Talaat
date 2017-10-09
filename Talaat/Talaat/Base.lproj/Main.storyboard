@@ -431,14 +431,27 @@
             </objects>
             <point key="canvasLocation" x="1605.5999999999999" y="-277.51124437781112"/>
         </scene>
-        <!--View Controller-->
+        <!--Venue DetailVC-->
         <scene sceneID="0Ex-iK-xmu">
             <objects>
-                <viewController id="cmr-xg-2q3" sceneMemberID="viewController">
+                <viewController id="cmr-xg-2q3" customClass="VenueDetailVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Fp-V8-o6E">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZhG-TY-nGo">
+                                <rect key="frame" x="0.0" y="20" width="375" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="zI0-xQ-TNa"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZhG-TY-nGo" firstAttribute="leading" secondItem="8UL-xD-Q2I" secondAttribute="leading" id="0cg-4U-7Oa"/>
+                            <constraint firstItem="8UL-xD-Q2I" firstAttribute="trailing" secondItem="ZhG-TY-nGo" secondAttribute="trailing" id="FwM-hg-x4f"/>
+                            <constraint firstItem="ZhG-TY-nGo" firstAttribute="top" secondItem="8UL-xD-Q2I" secondAttribute="top" id="rhE-Gz-oK2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="8UL-xD-Q2I"/>
                     </view>
                 </viewController>
