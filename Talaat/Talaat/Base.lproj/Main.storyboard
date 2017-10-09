@@ -445,11 +445,41 @@
                                     <constraint firstAttribute="height" constant="150" id="zI0-xQ-TNa"/>
                                 </constraints>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G2s-Jh-ZGG">
+                                <rect key="frame" x="10" y="30" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="GW9-iZ-u1s"/>
+                                    <constraint firstAttribute="width" constant="50" id="iJA-0W-617"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="backButtonAction:" destination="0NH-Ph-f5g" eventType="touchUpInside" id="Qqa-d8-PNg"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backArrow" translatesAutoresizingMaskIntoConstraints="NO" id="wGm-oZ-umt">
+                                <rect key="frame" x="20" y="30" width="10" height="19"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="NIGHTLIFE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="65f-64-Wx9">
+                                <rect key="frame" x="154" y="29" width="86.5" height="20"/>
+                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QCY-aD-cOM">
+                                <rect key="frame" x="20" y="70" width="335" height="577"/>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.57254901960000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ZhG-TY-nGo" firstAttribute="leading" secondItem="8UL-xD-Q2I" secondAttribute="leading" id="0cg-4U-7Oa"/>
+                            <constraint firstItem="wGm-oZ-umt" firstAttribute="top" secondItem="8UL-xD-Q2I" secondAttribute="top" constant="10" id="26p-Of-xXM"/>
+                            <constraint firstItem="65f-64-Wx9" firstAttribute="centerY" secondItem="wGm-oZ-umt" secondAttribute="centerY" id="4G0-EG-Ag2"/>
+                            <constraint firstItem="8UL-xD-Q2I" firstAttribute="bottom" secondItem="QCY-aD-cOM" secondAttribute="bottom" constant="20" id="Esk-od-NPr"/>
                             <constraint firstItem="8UL-xD-Q2I" firstAttribute="trailing" secondItem="ZhG-TY-nGo" secondAttribute="trailing" id="FwM-hg-x4f"/>
+                            <constraint firstItem="wGm-oZ-umt" firstAttribute="leading" secondItem="8UL-xD-Q2I" secondAttribute="leading" constant="20" id="IpO-KE-RNy"/>
+                            <constraint firstItem="8UL-xD-Q2I" firstAttribute="trailing" secondItem="QCY-aD-cOM" secondAttribute="trailing" constant="20" id="QaX-CD-35Z"/>
+                            <constraint firstItem="QCY-aD-cOM" firstAttribute="top" secondItem="ZhG-TY-nGo" secondAttribute="bottom" constant="-100" id="aU2-Y7-iIw"/>
+                            <constraint firstItem="QCY-aD-cOM" firstAttribute="leading" secondItem="8UL-xD-Q2I" secondAttribute="leading" constant="20" id="ew8-64-wZK"/>
                             <constraint firstItem="ZhG-TY-nGo" firstAttribute="top" secondItem="8UL-xD-Q2I" secondAttribute="top" id="rhE-Gz-oK2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8UL-xD-Q2I"/>
@@ -457,7 +487,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZZ6-Zj-zlL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2601" y="-235"/>
+            <point key="canvasLocation" x="2600.8000000000002" y="-235.23238380809596"/>
         </scene>
     </scenes>
     <resources>

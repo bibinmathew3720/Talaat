@@ -14,9 +14,13 @@
 
 @implementation VenueDetailVC
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+-(void)initView{
+    [super initView];
+    [self initialisation];
+}
+
+-(void)initialisation{
+    
 }
 
 - (void)didReceiveMemoryWarning {

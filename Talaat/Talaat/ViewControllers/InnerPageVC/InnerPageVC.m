@@ -8,6 +8,7 @@
 #import "OfferCell.h"
 #import "VenueCell.h"
 #import "InnerPageVC.h"
+#import "VenueDetailVC.h"
 typedef enum{
     PageVenues,
     PageOffers
@@ -119,7 +120,8 @@ typedef enum{
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if(self.pageType == PageVenues){
-        
+        id venueDetail = [self.venuesArray objectAtIndex:indexPath.row];
+        [self performSegueWithIdentifier:@"toVenuDetailPage" sender:venueDetail];
     }
 }
 
@@ -167,6 +169,12 @@ typedef enum{
         [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
         //        [[Utilities sharedHandler]handleApiFailureBlockInController:self withErrorResponse:errorResponseObject andStatusCode:statusCode];
     }];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)venueDetail{
+    NSLog(@"Venue Detail:%@",venueDetail);
+    VenueDetailVC *venueDetailPage = (VenueDetailVC *)segue.destinationViewController;
+    
 }
 
 /*
