@@ -21,6 +21,7 @@
 		D01C365E1F85576D003CBB1D /* InnerPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D01C365D1F85576D003CBB1D /* InnerPageVC.m */; };
 		D037AFB71F899CC70033EF68 /* OfferCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D037AFB31F899CC70033EF68 /* OfferCell.m */; };
 		D037AFB81F899CC70033EF68 /* VenueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D037AFB61F899CC70033EF68 /* VenueCell.m */; };
+		D0D64AFB1F8AFDF900E354A1 /* VenueDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D64AFA1F8AFDF900E354A1 /* VenueDetailVC.m */; };
 		D0E01CBF1F8A3EB0003FC8B1 /* NetworkHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E01CB51F8A3EB0003FC8B1 /* NetworkHandler.m */; };
 		D0E01CC01F8A3EB0003FC8B1 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E01CB81F8A3EB0003FC8B1 /* Reachability.m */; };
 		D0E01CC11F8A3EB0003FC8B1 /* RequestBodyGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E01CBA1F8A3EB0003FC8B1 /* RequestBodyGenerator.m */; };
@@ -80,6 +81,8 @@
 		D037AFB31F899CC70033EF68 /* OfferCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfferCell.m; sourceTree = "<group>"; };
 		D037AFB51F899CC70033EF68 /* VenueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueCell.h; sourceTree = "<group>"; };
 		D037AFB61F899CC70033EF68 /* VenueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueCell.m; sourceTree = "<group>"; };
+		D0D64AF91F8AFDF900E354A1 /* VenueDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VenueDetailVC.h; sourceTree = "<group>"; };
+		D0D64AFA1F8AFDF900E354A1 /* VenueDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VenueDetailVC.m; sourceTree = "<group>"; };
 		D0E01CB41F8A3EB0003FC8B1 /* NetworkHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkHandler.h; sourceTree = "<group>"; };
 		D0E01CB51F8A3EB0003FC8B1 /* NetworkHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkHandler.m; sourceTree = "<group>"; };
 		D0E01CB71F8A3EB0003FC8B1 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
@@ -226,6 +229,7 @@
 				D0013BFF1F820C9C0027BD20 /* BaseViewController */,
 				D01C36551F854F1B003CBB1D /* HomeVC */,
 				D01C365B1F855751003CBB1D /* InnerPageVC */,
+				D0D64AF81F8AFDE000E354A1 /* VenueDetailVC */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -306,6 +310,15 @@
 				D037AFB61F899CC70033EF68 /* VenueCell.m */,
 			);
 			path = VenueCell;
+			sourceTree = "<group>";
+		};
+		D0D64AF81F8AFDE000E354A1 /* VenueDetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				D0D64AF91F8AFDF900E354A1 /* VenueDetailVC.h */,
+				D0D64AFA1F8AFDF900E354A1 /* VenueDetailVC.m */,
+			);
+			path = VenueDetailVC;
 			sourceTree = "<group>";
 		};
 		D0E01CB31F8A3EB0003FC8B1 /* NetworkHandler */ = {
@@ -617,6 +630,7 @@
 				D0013C021F820CB40027BD20 /* BaseViewController.m in Sources */,
 				D0E01CC21F8A3EB0003FC8B1 /* ResponseHandler.m in Sources */,
 				D01C365E1F85576D003CBB1D /* InnerPageVC.m in Sources */,
+				D0D64AFB1F8AFDF900E354A1 /* VenueDetailVC.m in Sources */,
 				D0E01CBF1F8A3EB0003FC8B1 /* NetworkHandler.m in Sources */,
 				D0013BD71F8206120027BD20 /* main.m in Sources */,
 				D01C36581F854F52003CBB1D /* HomeVC.m in Sources */,
