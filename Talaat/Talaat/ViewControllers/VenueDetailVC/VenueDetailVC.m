@@ -5,13 +5,14 @@
 //  Created by Bibin Mathew on 10/9/17.
 //  Copyright © 2017 Talaat. All rights reserved.
 //
+#import "OfferCell.h"
 
 #import "VenueDetailVC.h"
 typedef enum{
     PageTypeInfo,
     PageTypeOffers
 } PageType;
-@interface VenueDetailVC ()
+@interface VenueDetailVC ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *infoUnderLineView;
 @property (weak, nonatomic) IBOutlet UIView *offerUndeLineView;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
@@ -62,6 +63,31 @@ typedef enum{
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - UITableView Datasources
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 10;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    OfferCell *offCell= (OfferCell *)[tableView dequeueReusableCellWithIdentifier:@"offerCell" forIndexPath:indexPath];
+    //offCell.offerDetail = [self.offersArray objectAtIndex:indexPath.row];
+    return offCell;
+}
+
+#pragma mark - UITableView Dalegates
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return UITableViewAutomaticDimension;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 }
 
 /*
