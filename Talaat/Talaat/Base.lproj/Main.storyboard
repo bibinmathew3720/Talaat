@@ -519,7 +519,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wLK-Na-OyP">
                                         <rect key="frame" x="167.5" y="0.0" width="167.5" height="44"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aNf-7o-QSm">
+                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aNf-7o-QSm">
                                                 <rect key="frame" x="-0.5" y="42" width="168" height="2"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
@@ -656,7 +656,7 @@
                                             <constraint firstItem="7k3-Zq-2lT" firstAttribute="leading" secondItem="6VS-oy-mhg" secondAttribute="leading" id="ulD-dm-CUc"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XFH-EO-t1k">
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XFH-EO-t1k">
                                         <rect key="frame" x="0.0" y="65" width="335" height="512"/>
                                         <subviews>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UuS-bT-0oo">
@@ -764,7 +764,10 @@
                     </view>
                     <connections>
                         <outlet property="infoUnderLineView" destination="Jsj-Df-gZL" id="6IU-C3-ciQ"/>
+                        <outlet property="infoView" destination="6VS-oy-mhg" id="o0P-G6-xdO"/>
+                        <outlet property="offerTableView" destination="UuS-bT-0oo" id="zEr-aV-p3N"/>
                         <outlet property="offerUndeLineView" destination="aNf-7o-QSm" id="sod-bq-QAX"/>
+                        <outlet property="offerView" destination="XFH-EO-t1k" id="OPN-Zf-0FH"/>
                         <outlet property="phoneLabel" destination="1lJ-pt-LDS" id="WFQ-1n-dqx"/>
                         <outlet property="timeLabel" destination="sar-5K-p0q" id="I9a-FK-0XZ"/>
                         <outlet property="venueDescriptionLabel" destination="QUp-yo-xQi" id="fVn-c6-wgL"/>

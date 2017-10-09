@@ -7,13 +7,21 @@
 //
 
 #import "VenueDetailVC.h"
-
+typedef enum{
+    PageTypeInfo,
+    PageTypeOffers
+} PageType;
 @interface VenueDetailVC ()
 @property (weak, nonatomic) IBOutlet UIView *infoUnderLineView;
 @property (weak, nonatomic) IBOutlet UIView *offerUndeLineView;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *phoneLabel;
 @property (weak, nonatomic) IBOutlet UILabel *venueDescriptionLabel;
+@property (weak, nonatomic) IBOutlet UIView *infoView;
+@property (weak, nonatomic) IBOutlet UIView *offerView;
+@property (weak, nonatomic) IBOutlet UITableView *offerTableView;
+
+@property (nonatomic, assign) PageType pageType;
 
 @end
 
@@ -25,7 +33,9 @@
 }
 
 -(void)initialisation{
-    
+    self.pageType = PageTypeInfo;
+    self.offerTableView.estimatedRowHeight = 60;
+    self.offerTableView.rowHeight = UITableViewAutomaticDimension;
 }
 
 #pragma mark - Button Actions
@@ -34,8 +44,18 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 - (IBAction)infoButtonAction:(UIButton *)sender {
+     self.pageType = PageTypeInfo;
+    self.infoUnderLineView.hidden = NO;
+    self.infoView.hidden = NO;
+    self.offerView.hidden = YES;
+    self.offerUndeLineView.hidden = YES;
 }
 - (IBAction)offersButtonAction:(UIButton *)sender {
+     self.pageType = PageTypeOffers;
+    self.infoUnderLineView.hidden = YES;
+    self.infoView.hidden = YES;
+    self.offerView.hidden = NO;
+    self.offerUndeLineView.hidden = NO;
 }
 
 
