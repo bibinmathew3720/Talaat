@@ -23,6 +23,7 @@
 
 -(void)setVenueDetail:(id)venueDetail{
     self.venueHeadingLabel.text = [NSString stringWithFormat:@"%@",[venueDetail valueForKey:@"name"]];
+    [self.offerImageView sd_setImageWithURL:[NSURL URLWithString:[venueDetail valueForKey:@"image"]] placeholderImage:[UIImage imageNamed:PlaceholderImageName]];
 }
 
 @end

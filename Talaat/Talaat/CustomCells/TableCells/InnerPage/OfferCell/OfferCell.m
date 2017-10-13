@@ -24,6 +24,7 @@
 -(void)setOfferDetail:(id)offerDetail{
     self.offerHeadingLabel.text = [NSString stringWithFormat:@"%@",[offerDetail valueForKey:@"title"]];
     self.offerDetailLabel.text = [NSString stringWithFormat:@"%@",[offerDetail valueForKey:@"description"]];
+    [self.offerImageView sd_setImageWithURL:[NSURL URLWithString:[offerDetail valueForKey:@"image_path"]] placeholderImage:[UIImage imageNamed:PlaceholderImageName]];
 }
 
 @end
