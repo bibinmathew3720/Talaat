@@ -270,29 +270,29 @@
                                         <rect key="frame" x="0.0" y="64" width="335" height="423"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="offerCell" rowHeight="117" id="vcW-OK-qyY" customClass="OfferCell">
-                                                <rect key="frame" x="0.0" y="28" width="335" height="117"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="offerCell" rowHeight="120" id="vcW-OK-qyY" customClass="OfferCell">
+                                                <rect key="frame" x="0.0" y="28" width="335" height="120"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vcW-OK-qyY" id="0Bn-2r-rId">
-                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="117"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="120"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sm7-Np-nWU">
-                                                            <rect key="frame" x="0.0" y="10" width="75" height="50"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sm7-Np-nWU">
+                                                            <rect key="frame" x="0.0" y="10" width="100" height="100"/>
                                                             <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="50" id="K8y-x7-qwB"/>
-                                                                <constraint firstAttribute="width" constant="75" id="kJI-WS-k9j"/>
+                                                                <constraint firstAttribute="height" constant="100" id="K8y-x7-qwB"/>
+                                                                <constraint firstAttribute="width" constant="100" id="kJI-WS-k9j"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label adjasdja djdjadjjdhjas adasgagd j afjagfjgjfj hfhfjhdfjhaj jafjhajf ajfhjafhjaf jafjhafjhajfh" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7Q-Pq-KNJ">
-                                                            <rect key="frame" x="85" y="10" width="240" height="23.5"/>
+                                                            <rect key="frame" x="110" y="10" width="215" height="23.5"/>
                                                             <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="20"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ghag fjagff gfgfgdgf gfgfgdgf  ggfsfgg gf gdfgggf gfgfffg" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Us-Dh-EZW">
-                                                            <rect key="frame" x="85" y="42.5" width="240" height="16.5"/>
+                                                            <rect key="frame" x="110" y="42.5" width="215" height="16.5"/>
                                                             <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="14"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -320,28 +320,28 @@
                                                     <outlet property="offerImageView" destination="Sm7-Np-nWU" id="7eC-kJ-Xyf"/>
                                                 </connections>
                                             </tableViewCell>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="venueCell" rowHeight="65" id="B2w-Lf-ygB" customClass="VenueCell">
-                                                <rect key="frame" x="0.0" y="145" width="335" height="65"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="venueCell" rowHeight="150" id="B2w-Lf-ygB" customClass="VenueCell">
+                                                <rect key="frame" x="0.0" y="148" width="335" height="150"/>
                                                 <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B2w-Lf-ygB" id="HRQ-WV-9xs">
-                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="65"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B2w-Lf-ygB" id="HRQ-WV-9xs">
+                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="150"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AYI-XB-FQa">
-                                                            <rect key="frame" x="0.0" y="10.5" width="75" height="50"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AYI-XB-FQa">
+                                                            <rect key="frame" x="0.0" y="10.5" width="100" height="100"/>
                                                             <color key="backgroundColor" red="0.99215686270000003" green="0.76470588240000004" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="50" id="09V-rR-aCu"/>
-                                                                <constraint firstAttribute="width" constant="75" id="zqw-Qg-A4q"/>
+                                                                <constraint firstAttribute="height" constant="100" id="09V-rR-aCu"/>
+                                                                <constraint firstAttribute="width" constant="100" id="zqw-Qg-A4q"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label dfsfj fsdfhshf hfhsfh  f fhfh ffhf hfhf hhfh hfdshfshhsh f fhh hfhfhhfh     dh fhfhsfh" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ask-FN-28a">
-                                                            <rect key="frame" x="85" y="10.5" width="197" height="23.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label dfsfj fsdfhshf hfhsfh  f fhfh ffhf hfhf hhfh hfdshfshhsh f fhh hfhfhhfh     dh fhfhsfh" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ask-FN-28a">
+                                                            <rect key="frame" x="110" y="10.5" width="172" height="23.5"/>
                                                             <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="20"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qy2-ib-mYQ">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qy2-ib-mYQ">
                                                             <rect key="frame" x="292" y="10.5" width="33" height="33"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="33" id="1NB-Tw-1cY"/>
