@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4DB8462213E3F330401F5FDA /* libPods-TalaatUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0D7562D1F91447100E880D2 /* libPods-TalaatUITests.a */; };
 		6B7004C357FC181406219982 /* libPods-TalaatUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B07243AE2839143B0614F88F /* libPods-TalaatUITests.a */; };
+		98A5C07CA2314E0AD51759D5 /* libPods-TalaatTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0D7562C1F91447100E880D2 /* libPods-TalaatTests.a */; };
 		A1C571B573510D2A821F3311 /* libPods-TalaatTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E04A88479A5839F6E840A0AE /* libPods-TalaatTests.a */; };
 		D0013BC91F8206120027BD20 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0013BC81F8206120027BD20 /* AppDelegate.m */; };
 		D0013BCF1F8206120027BD20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0013BCD1F8206120027BD20 /* Main.storyboard */; };
@@ -22,12 +24,12 @@
 		D037AFB71F899CC70033EF68 /* OfferCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D037AFB31F899CC70033EF68 /* OfferCell.m */; };
 		D037AFB81F899CC70033EF68 /* VenueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D037AFB61F899CC70033EF68 /* VenueCell.m */; };
 		D0D64AFB1F8AFDF900E354A1 /* VenueDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D64AFA1F8AFDF900E354A1 /* VenueDetailVC.m */; };
+		D0D7562E1F91461100E880D2 /* libPods-Talaat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0D7562F1F91461100E880D2 /* libPods-Talaat.a */; };
 		D0E01CBF1F8A3EB0003FC8B1 /* NetworkHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E01CB51F8A3EB0003FC8B1 /* NetworkHandler.m */; };
 		D0E01CC01F8A3EB0003FC8B1 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E01CB81F8A3EB0003FC8B1 /* Reachability.m */; };
 		D0E01CC11F8A3EB0003FC8B1 /* RequestBodyGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E01CBA1F8A3EB0003FC8B1 /* RequestBodyGenerator.m */; };
 		D0E01CC21F8A3EB0003FC8B1 /* ResponseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E01CBC1F8A3EB0003FC8B1 /* ResponseHandler.m */; };
 		D0E01CC31F8A3EB0003FC8B1 /* UrlGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E01CBE1F8A3EB0003FC8B1 /* UrlGenerator.m */; };
-		D526804615932666E0BA2CE1 /* libPods-Talaat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 21DA4FEEDC35833181563E88 /* libPods-Talaat.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,12 @@
 		D037AFB61F899CC70033EF68 /* VenueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueCell.m; sourceTree = "<group>"; };
 		D0D64AF91F8AFDF900E354A1 /* VenueDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VenueDetailVC.h; sourceTree = "<group>"; };
 		D0D64AFA1F8AFDF900E354A1 /* VenueDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VenueDetailVC.m; sourceTree = "<group>"; };
+		D0D756271F9143E100E880D2 /* libAFNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libAFNetworking.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0D756281F9143E100E880D2 /* libMBProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libMBProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0D756291F9143E100E880D2 /* libSDWebImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSDWebImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0D7562C1F91447100E880D2 /* libPods-TalaatTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-TalaatTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0D7562D1F91447100E880D2 /* libPods-TalaatUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-TalaatUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0D7562F1F91461100E880D2 /* libPods-Talaat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-Talaat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E01CB41F8A3EB0003FC8B1 /* NetworkHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkHandler.h; sourceTree = "<group>"; };
 		D0E01CB51F8A3EB0003FC8B1 /* NetworkHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkHandler.m; sourceTree = "<group>"; };
 		D0E01CB71F8A3EB0003FC8B1 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
@@ -102,7 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D526804615932666E0BA2CE1 /* libPods-Talaat.a in Frameworks */,
+				D0D7562E1F91461100E880D2 /* libPods-Talaat.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +119,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1C571B573510D2A821F3311 /* libPods-TalaatTests.a in Frameworks */,
+				98A5C07CA2314E0AD51759D5 /* libPods-TalaatTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B7004C357FC181406219982 /* libPods-TalaatUITests.a in Frameworks */,
+				4DB8462213E3F330401F5FDA /* libPods-TalaatUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +151,12 @@
 		96BFDC5236C08B8D0C015563 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D0D7562F1F91461100E880D2 /* libPods-Talaat.a */,
+				D0D7562C1F91447100E880D2 /* libPods-TalaatTests.a */,
+				D0D7562D1F91447100E880D2 /* libPods-TalaatUITests.a */,
+				D0D756271F9143E100E880D2 /* libAFNetworking.a */,
+				D0D756281F9143E100E880D2 /* libMBProgressHUD.a */,
+				D0D756291F9143E100E880D2 /* libSDWebImage.a */,
 				21DA4FEEDC35833181563E88 /* libPods-Talaat.a */,
 				E04A88479A5839F6E840A0AE /* libPods-TalaatTests.a */,
 				B07243AE2839143B0614F88F /* libPods-TalaatUITests.a */,
@@ -422,7 +438,7 @@
 				TargetAttributes = {
 					D0013BC31F8206120027BD20 = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					D0013BDB1F8206120027BD20 = {
 						CreatedOnToolsVersion = 9.0;
@@ -802,16 +818,18 @@
 			baseConfigurationReference = CA4C509A03D898AEA73A4579 /* Pods-Talaat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WVYK59KXPF;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 8448H67J5S;
+				ENABLE_BITCODE = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Talaat/Talaat-Prefix.pch";
 				INFOPLIST_FILE = Talaat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.talaat.iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "e6b026e4-5fcf-46e7-877e-9fe3689e1d3b";
+				PROVISIONING_PROFILE_SPECIFIER = adhoc_talaat;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -821,16 +839,18 @@
 			baseConfigurationReference = 83538F445863117F41837E66 /* Pods-Talaat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WVYK59KXPF;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 8448H67J5S;
+				ENABLE_BITCODE = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Talaat/Talaat-Prefix.pch";
 				INFOPLIST_FILE = Talaat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.talaat.iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "e6b026e4-5fcf-46e7-877e-9fe3689e1d3b";
+				PROVISIONING_PROFILE_SPECIFIER = adhoc_talaat;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
