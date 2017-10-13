@@ -128,12 +128,16 @@ typedef enum{
 #pragma mark - Get All Venues Api
 
 -(void)callingGetAllVenuesApi{
+    NSString *categoryString = @"";
+    if(self.type == EventTypeDine)
+        categoryString = @"category=dine";
+    else if (self.type == EventTypeNightLife)
+        categoryString = @"category=night";
     if(self.venuesArray.count == 0)
         [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     NSURL *url = [[UrlGenerator sharedHandler] urlForRequestType:TALAATURLTYPEGETALLVENUES withURLParameter:nil];
-    NetworkHandler *networkHandler = [[NetworkHandler alloc] initWithRequestUrl:url withBody:nil withMethodType:HTTPMethodPOST withHeaderFeild:nil];
+    NetworkHandler *networkHandler = [[NetworkHandler alloc] initWithRequestUrl:url withBody:categoryString withMethodType:HTTPMethodPOST withHeaderFeild:nil];
     [networkHandler startServieRequestWithSucessBlockSuccessBlock:^(id responseObject, int statusCode) {
-        NSLog(@"Response Objecte:%@",responseObject);
         [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
         if([[[responseObject valueForKey:@"result"] valueForKey:@"response"] isEqualToString:@"success"]){
             self.venuesArray = [responseObject valueForKey:@"data"];
@@ -152,10 +156,14 @@ typedef enum{
 -(void)callingGetAllOffersApi{
     if(self.offersArray.count == 0)
         [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    NSString *categoryString = @"";
+    if(self.type == EventTypeDine)
+        categoryString = @"category=dine";
+    else if (self.type == EventTypeNightLife)
+        categoryString = @"category=night";
     NSURL *url = [[UrlGenerator sharedHandler] urlForRequestType:TALAATURLTYPEGETALLOFFERS withURLParameter:nil];
-    NetworkHandler *networkHandler = [[NetworkHandler alloc] initWithRequestUrl:url withBody:nil withMethodType:HTTPMethodPOST withHeaderFeild:nil];
+    NetworkHandler *networkHandler = [[NetworkHandler alloc] initWithRequestUrl:url withBody:categoryString withMethodType:HTTPMethodPOST withHeaderFeild:nil];
     [networkHandler startServieRequestWithSucessBlockSuccessBlock:^(id responseObject, int statusCode) {
-        NSLog(@"Response Objecte:%@",responseObject);
         [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
         if([[[responseObject valueForKey:@"result"] valueForKey:@"response"] isEqualToString:@"success"]){
             self.offersArray = [responseObject valueForKey:@"data"];

@@ -10,8 +10,8 @@
 
 static NSString *BaseUrl = @"http://govalet.me/talaat/api/";
 
-static NSString *getAllVenueString =@"fetch_all_venue";
-static NSString *getAllOffersString =@"fetch_all_offers";
+static NSString *getAllVenueString =@"fetch_all_venue?";
+static NSString *getAllOffersString =@"fetch_all_offers?";
 static NSString *getVenueDetailsString =@"";
 
 
