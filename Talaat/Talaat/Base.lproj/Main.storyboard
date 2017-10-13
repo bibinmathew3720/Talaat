@@ -13,6 +13,9 @@
         <array key="Kefa.ttf">
             <string>Kefa-Regular</string>
         </array>
+        <array key="Menlo.ttc">
+            <string>Menlo-Bold</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Navigation Controller-->
@@ -177,8 +180,8 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NIGHTLIFE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avG-kI-Cz7">
-                                <rect key="frame" x="144" y="29.5" width="86.5" height="20"/>
-                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="17"/>
+                                <rect key="frame" x="133.5" y="28" width="108.5" height="23.5"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
