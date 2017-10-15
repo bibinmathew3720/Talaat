@@ -12,7 +12,7 @@ static NSString *BaseUrl = @"http://govalet.me/talaat/api/";
 
 static NSString *getAllVenueString =@"fetch_all_venue?";
 static NSString *getAllOffersString =@"fetch_all_offers?";
-static NSString *getVenueDetailsString =@"";
+static NSString *getVenueDetailsString =@"fetch_venue_by_id";
 
 
 typedef NS_ENUM(NSInteger, TALAATURLTYPE ){

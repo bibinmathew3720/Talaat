@@ -31,6 +31,7 @@ typedef enum{
 -(void)initView{
     [super initView];
     [self initialisation];
+    [self callingGetAllVenuesApi];
 }
 
 -(void)initialisation{
@@ -88,6 +89,26 @@ typedef enum{
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+}
+
+#pragma mark - Get Venue Details Api
+
+-(void)callingGetAllVenuesApi{
+    NSString *venueIdString = [NSString stringWithFormat:@"venue_id=%@",self.venueId];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    NSURL *url = [[UrlGenerator sharedHandler] urlForRequestType:TALAATURLTYPEFETCHVENUEDETAILS withURLParameter:nil];
+    NetworkHandler *networkHandler = [[NetworkHandler alloc] initWithRequestUrl:url withBody:venueIdString withMethodType:HTTPMethodPOST withHeaderFeild:nil];
+    [networkHandler startServieRequestWithSucessBlockSuccessBlock:^(id responseObject, int statusCode) {
+        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+        if([[[responseObject valueForKey:@"result"] valueForKey:@"response"] isEqualToString:@"success"]){
+
+        }
+        
+        
+    } FailureBlock:^(NSError *error, int statusCode, id errorResponseObject) {
+        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+        //        [[Utilities sharedHandler]handleApiFailureBlockInController:self withErrorResponse:errorResponseObject andStatusCode:statusCode];
+    }];
 }
 
 /*

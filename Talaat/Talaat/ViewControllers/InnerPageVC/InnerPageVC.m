@@ -180,8 +180,8 @@ typedef enum{
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)venueDetail{
-    NSLog(@"Venue Detail:%@",venueDetail);
     VenueDetailVC *venueDetailPage = (VenueDetailVC *)segue.destinationViewController;
+    venueDetailPage.venueId = [venueDetail valueForKey:@"id"];
     
 }
 

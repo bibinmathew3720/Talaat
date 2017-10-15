@@ -614,7 +614,7 @@
                                                         </constraints>
                                                     </view>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.38039215686274508" green="0.70196078431372544" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="Xez-Qa-ya3" firstAttribute="top" secondItem="aQI-Wx-MRI" secondAttribute="bottom" constant="1" id="2li-K0-MIx"/>
                                                     <constraint firstItem="aQI-Wx-MRI" firstAttribute="top" secondItem="7k3-Zq-2lT" secondAttribute="top" id="BJZ-Ph-s6Q"/>

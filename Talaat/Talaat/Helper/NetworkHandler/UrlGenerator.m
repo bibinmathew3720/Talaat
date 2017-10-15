@@ -31,7 +31,7 @@
         }
             break;
         case TALAATURLTYPEFETCHVENUEDETAILS: {
-            appendingUrl = [getVenueDetailsString stringByAppendingString:urlParameter];;
+            appendingUrl = getVenueDetailsString;
         }
             break;
         default:
