@@ -31,7 +31,7 @@ typedef enum{
 -(void)initView{
     [super initView];
     [self initialisation];
-    [self callingGetAllVenuesApi];
+    [self callingGetVenueDetailsApi];
 }
 
 -(void)initialisation{
@@ -93,15 +93,17 @@ typedef enum{
 
 #pragma mark - Get Venue Details Api
 
--(void)callingGetAllVenuesApi{
+-(void)callingGetVenueDetailsApi{
     NSString *venueIdString = [NSString stringWithFormat:@"venue_id=%@",self.venueId];
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     NSURL *url = [[UrlGenerator sharedHandler] urlForRequestType:TALAATURLTYPEFETCHVENUEDETAILS withURLParameter:nil];
     NetworkHandler *networkHandler = [[NetworkHandler alloc] initWithRequestUrl:url withBody:venueIdString withMethodType:HTTPMethodPOST withHeaderFeild:nil];
     [networkHandler startServieRequestWithSucessBlockSuccessBlock:^(id responseObject, int statusCode) {
         [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+        NSLog(@"Response Object:%@",responseObject);
         if([[[responseObject valueForKey:@"result"] valueForKey:@"response"] isEqualToString:@"success"]){
-
+            [self populateInfoViewWithReponse:[responseObject valueForKey:@"data"]];
+            [self populateOfferListWithOffersArray:[[responseObject valueForKey:@"data"] valueForKey:@"offers"]];
         }
         
         
@@ -109,6 +111,16 @@ typedef enum{
         [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
         //        [[Utilities sharedHandler]handleApiFailureBlockInController:self withErrorResponse:errorResponseObject andStatusCode:statusCode];
     }];
+}
+
+-(void)populateInfoViewWithReponse:(id)response{
+    self.phoneLabel.text = [NSString stringWithFormat:@"%@",[response valueForKey:@"phone"]];
+    NSString *description = [NSString stringWithFormat:@"\n%@\n\n%@\n\n%@",[response valueForKey:@"description"],[response valueForKey:@"address"],[response valueForKey:@"email"]];
+    self.venueDescriptionLabel.text = description;
+}
+
+-(void)populateOfferListWithOffersArray:(NSArray *)offersArray{
+    
 }
 
 /*

@@ -401,7 +401,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.10196078431372549" green="0.11764705882352941" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ye1-ki-1xf" firstAttribute="top" secondItem="iP2-e0-ObO" secondAttribute="bottom" constant="-100" id="8QR-Pa-edG"/>
                             <constraint firstItem="avG-kI-Cz7" firstAttribute="centerY" secondItem="6tM-xc-fAb" secondAttribute="centerY" id="8h1-HL-4qd"/>
@@ -632,7 +632,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dEe-Pi-y2A">
                                                 <rect key="frame" x="0.0" y="81" width="335" height="451"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QUp-yo-xQi">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QUp-yo-xQi">
                                                         <rect key="frame" x="0.0" y="10" width="335" height="20"/>
                                                         <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -751,7 +751,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.10196078431372549" green="0.11764705882352941" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ZhG-TY-nGo" firstAttribute="leading" secondItem="8UL-xD-Q2I" secondAttribute="leading" id="0cg-4U-7Oa"/>
                             <constraint firstItem="wGm-oZ-umt" firstAttribute="top" secondItem="8UL-xD-Q2I" secondAttribute="top" constant="10" id="26p-Of-xXM"/>
