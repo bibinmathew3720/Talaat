@@ -50,6 +50,7 @@ typedef enum{
     self.offerTableView.estimatedRowHeight = 60;
     self.offerTableView.rowHeight = UITableViewAutomaticDimension;
     self.headingLabel.text = self.headingString;
+    self.scrollView.contentInset = UIEdgeInsetsMake(0, 0, -80, 0);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -146,7 +147,6 @@ typedef enum{
         [self settingBackGroundImages];
     self.scrollView.frame = CGRectMake(0, 0, self.view.frame.size.width, TopViewHeight);
     self.scrollView.contentSize = CGSizeMake(self.imagesArray.count*self.view.frame.size.width, TopViewHeight);
-    self.scrollView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
 }
 
 - (void)settingBackGroundImages{
