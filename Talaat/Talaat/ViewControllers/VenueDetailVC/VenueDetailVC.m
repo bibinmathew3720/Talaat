@@ -21,6 +21,7 @@ typedef enum{
 @property (weak, nonatomic) IBOutlet UIView *infoView;
 @property (weak, nonatomic) IBOutlet UIView *offerView;
 @property (weak, nonatomic) IBOutlet UITableView *offerTableView;
+@property (weak, nonatomic) IBOutlet UILabel *noOffersLabel;
 
 @property (nonatomic, assign) PageType pageType;
 @property (nonatomic, strong) NSArray *offersArray;
@@ -74,6 +75,7 @@ typedef enum{
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    
     return self.offersArray.count;
 }
 
@@ -134,8 +136,17 @@ typedef enum{
 }
 
 -(void)populateOfferListWithOffersArray:(NSArray *)offersArray{
-    self.offersArray = offersArray;
-    [self.offerTableView reloadData];
+    NSUInteger offerCount = offersArray.count;
+    if(offerCount == 0){
+        self.offerTableView.hidden = YES;
+        self.noOffersLabel.hidden = NO;
+    }
+    else{
+        self.offerTableView.hidden = NO;
+        self.noOffersLabel.hidden = YES;
+        self.offersArray = offersArray;
+        [self.offerTableView reloadData];
+    }
 }
 
 /*

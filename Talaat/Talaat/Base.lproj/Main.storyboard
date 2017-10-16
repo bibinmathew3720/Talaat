@@ -662,32 +662,32 @@
                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XFH-EO-t1k">
                                         <rect key="frame" x="0.0" y="65" width="335" height="532"/>
                                         <subviews>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UuS-bT-0oo">
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UuS-bT-0oo">
                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="532"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="offerCell" rowHeight="118" id="RSa-ro-5tm" customClass="OfferCell">
-                                                        <rect key="frame" x="0.0" y="28" width="335" height="118"/>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="offerCell" rowHeight="154" id="RSa-ro-5tm" customClass="OfferCell">
+                                                        <rect key="frame" x="0.0" y="28" width="335" height="154"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RSa-ro-5tm" id="aYa-jd-HWy">
-                                                            <rect key="frame" x="0.0" y="0.0" width="335" height="117.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="335" height="154"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iDP-jW-zBX">
-                                                                    <rect key="frame" x="0.0" y="10" width="75" height="50"/>
+                                                                    <rect key="frame" x="0.0" y="10" width="100" height="100"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" constant="75" id="C9D-kK-LhT"/>
-                                                                        <constraint firstAttribute="height" constant="50" id="fpe-30-Zqd"/>
+                                                                        <constraint firstAttribute="width" constant="100" id="C9D-kK-LhT"/>
+                                                                        <constraint firstAttribute="height" constant="100" id="fpe-30-Zqd"/>
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8XJ-iO-1sv">
-                                                                    <rect key="frame" x="85" y="10" width="240" height="20"/>
+                                                                    <rect key="frame" x="110" y="10" width="215" height="20"/>
                                                                     <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="17"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="woU-4o-1U4">
-                                                                    <rect key="frame" x="85" y="35" width="240" height="16.5"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="woU-4o-1U4">
+                                                                    <rect key="frame" x="110" y="35" width="215" height="16.5"/>
                                                                     <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="14"/>
                                                                     <color key="textColor" white="1" alpha="0.798002860915493" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
@@ -719,13 +719,21 @@
                                                     <outlet property="delegate" destination="cmr-xg-2q3" id="ho5-mg-LMd"/>
                                                 </connections>
                                             </tableView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No offers available" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m1H-41-Kmh">
+                                                <rect key="frame" x="95.5" y="255.5" width="143.5" height="20"/>
+                                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="UuS-bT-0oo" secondAttribute="trailing" id="5V4-Ua-5w2"/>
+                                            <constraint firstItem="m1H-41-Kmh" firstAttribute="centerY" secondItem="XFH-EO-t1k" secondAttribute="centerY" id="5Vj-Iu-Jca"/>
                                             <constraint firstItem="UuS-bT-0oo" firstAttribute="leading" secondItem="XFH-EO-t1k" secondAttribute="leading" id="GFT-gp-jXI"/>
                                             <constraint firstItem="UuS-bT-0oo" firstAttribute="top" secondItem="XFH-EO-t1k" secondAttribute="top" id="KWV-IQ-ZaC"/>
                                             <constraint firstAttribute="bottom" secondItem="UuS-bT-0oo" secondAttribute="bottom" id="Xbm-EX-srS"/>
+                                            <constraint firstItem="m1H-41-Kmh" firstAttribute="centerX" secondItem="XFH-EO-t1k" secondAttribute="centerX" id="a8d-IW-f2E"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -772,6 +780,7 @@
                     <connections>
                         <outlet property="infoUnderLineView" destination="Jsj-Df-gZL" id="6IU-C3-ciQ"/>
                         <outlet property="infoView" destination="6VS-oy-mhg" id="o0P-G6-xdO"/>
+                        <outlet property="noOffersLabel" destination="m1H-41-Kmh" id="B3k-8R-1tI"/>
                         <outlet property="offerTableView" destination="UuS-bT-0oo" id="zEr-aV-p3N"/>
                         <outlet property="offerUndeLineView" destination="aNf-7o-QSm" id="sod-bq-QAX"/>
                         <outlet property="offerView" destination="XFH-EO-t1k" id="OPN-Zf-0FH"/>
