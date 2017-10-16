@@ -14,7 +14,7 @@ typedef enum{
     PageTypeInfo,
     PageTypeOffers
 } PageType;
-@interface VenueDetailVC ()<UITableViewDataSource,UITableViewDelegate>
+@interface VenueDetailVC ()<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *infoUnderLineView;
 @property (weak, nonatomic) IBOutlet UIView *offerUndeLineView;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
@@ -174,11 +174,11 @@ typedef enum{
     for (int i = 0; i < self.imagesArray.count; i++)
     {
         self.imageView = [[UIImageView alloc] init];
-        self.imageView.contentMode = UIViewContentModeScaleAspectFit;
-        self.imageView.clipsToBounds = YES;
+        self.imageView.contentMode = UIViewContentModeScaleToFill;
+        //self.imageView.clipsToBounds = YES;
         gradientImageView = [[UIImageView alloc] init];
         gradientImageView.contentMode = UIViewContentModeScaleToFill;
-        gradientImageView.clipsToBounds = YES;
+       // gradientImageView.clipsToBounds = YES;
         CGRect frame = CGRectMake(0, 0, self.view.frame.size.width,TopViewHeight);
         frame.origin.x = self.view.frame.size.width*i;
         frame.origin.y = 0.0f;
@@ -191,6 +191,12 @@ typedef enum{
     }
 }
 
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if(scrollView == self.scrollView){
+        
+    }
+}
 /*
 #pragma mark - Navigation
 
