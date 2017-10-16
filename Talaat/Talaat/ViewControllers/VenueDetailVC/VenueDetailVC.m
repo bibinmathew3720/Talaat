@@ -29,6 +29,7 @@ typedef enum{
 @property (nonatomic, strong) NSArray *offersArray;
 @property (nonatomic, strong) NSArray *imagesArray;
 @property (nonatomic, strong) UIImageView *imageView;
+@property (nonatomic, strong) NSString *phoneString;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UILabel *headingLabel;
 @property (nonatomic, assign) BOOL isApiGetFired;
@@ -50,27 +51,6 @@ typedef enum{
     self.offerTableView.rowHeight = UITableViewAutomaticDimension;
     self.headingLabel.text = self.headingString;
 }
-
-#pragma mark - Button Actions
-
-- (IBAction)backButtonAction:(UIButton *)sender {
-    [self.navigationController popViewControllerAnimated:YES];
-}
-- (IBAction)infoButtonAction:(UIButton *)sender {
-     self.pageType = PageTypeInfo;
-    self.infoUnderLineView.hidden = NO;
-    self.infoView.hidden = NO;
-    self.offerView.hidden = YES;
-    self.offerUndeLineView.hidden = YES;
-}
-- (IBAction)offersButtonAction:(UIButton *)sender {
-     self.pageType = PageTypeOffers;
-    self.infoUnderLineView.hidden = YES;
-    self.infoView.hidden = YES;
-    self.offerView.hidden = NO;
-    self.offerUndeLineView.hidden = NO;
-}
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -127,7 +107,8 @@ typedef enum{
 }
 
 -(void)populateInfoViewWithReponse:(id)response{
-    self.phoneLabel.text = [NSString stringWithFormat:@"%@",[response valueForKey:@"phone"]];
+    self.phoneString = [NSString stringWithFormat:@"%@",[response valueForKey:@"phone"]];
+    self.phoneLabel.text = self.phoneString;
     NSString *description = [NSString stringWithFormat:@"\n%@\n\n%@\n\n%@",[response valueForKey:@"description"],[response valueForKey:@"address"],[response valueForKey:@"email"]];
     self.venueDescriptionLabel.text = description;
     NSString *startTimeString = [self getTimeInAmPmFormat:[response valueForKey:@"working_hours_start"]];
@@ -209,5 +190,34 @@ typedef enum{
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - Button Actions
+
+- (IBAction)phoneButtonAction:(UIButton *)sender {
+    NSString *phoneNumber = [@"tel://" stringByAppendingString:self.phoneString];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneNumber]];
+}
+
+- (IBAction)locationButtonAction:(UIButton *)sender {
+}
+
+- (IBAction)backButtonAction:(UIButton *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)infoButtonAction:(UIButton *)sender {
+    self.pageType = PageTypeInfo;
+    self.infoUnderLineView.hidden = NO;
+    self.infoView.hidden = NO;
+    self.offerView.hidden = YES;
+    self.offerUndeLineView.hidden = YES;
+}
+- (IBAction)offersButtonAction:(UIButton *)sender {
+    self.pageType = PageTypeOffers;
+    self.infoUnderLineView.hidden = YES;
+    self.infoView.hidden = YES;
+    self.offerView.hidden = NO;
+    self.offerUndeLineView.hidden = NO;
+}
 
 @end
