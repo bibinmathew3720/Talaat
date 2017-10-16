@@ -23,6 +23,7 @@ typedef enum{
 @property (weak, nonatomic) IBOutlet UITableView *offerTableView;
 
 @property (nonatomic, assign) PageType pageType;
+@property (nonatomic, strong) NSArray *offersArray;
 
 @end
 
@@ -73,12 +74,12 @@ typedef enum{
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    return self.offersArray.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     OfferCell *offCell= (OfferCell *)[tableView dequeueReusableCellWithIdentifier:@"offerCell" forIndexPath:indexPath];
-    //offCell.offerDetail = [self.offersArray objectAtIndex:indexPath.row];
+    offCell.offerDetail = [self.offersArray objectAtIndex:indexPath.row];
     return offCell;
 }
 
@@ -133,7 +134,8 @@ typedef enum{
 }
 
 -(void)populateOfferListWithOffersArray:(NSArray *)offersArray{
-    
+    self.offersArray = offersArray;
+    [self.offerTableView reloadData];
 }
 
 /*
