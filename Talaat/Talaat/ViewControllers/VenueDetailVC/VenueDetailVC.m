@@ -194,7 +194,10 @@ typedef enum{
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     if(scrollView == self.scrollView){
-        
+        CGFloat pageWidth = self.scrollView.frame.size.width;
+        float fractionalPage = self.scrollView.contentOffset.x / pageWidth;
+        NSInteger Oripage = lround(fractionalPage);
+        self.pageControl.currentPage = Oripage;
     }
 }
 /*
