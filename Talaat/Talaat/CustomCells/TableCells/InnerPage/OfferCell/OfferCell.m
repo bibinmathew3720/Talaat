@@ -27,7 +27,7 @@
     if([offerDetail valueForKey:@"validity"])
         validityString = [self getValidity:[offerDetail valueForKey:@"validity"]];
     if(validityString.length>0)
-        validityString = [NSString stringWithFormat:@"*Offer valid till %@th",validityString];
+        validityString = [NSString stringWithFormat:@"*Offer validity till %@th",validityString];
     self.offerDetailLabel.text = [NSString stringWithFormat:@"%@\n%@",[offerDetail valueForKey:@"description"],validityString];
     [self.offerImageView sd_setImageWithURL:[NSURL URLWithString:[offerDetail valueForKey:@"image_path"]] placeholderImage:[UIImage imageNamed:PlaceholderImageName]];
 }
