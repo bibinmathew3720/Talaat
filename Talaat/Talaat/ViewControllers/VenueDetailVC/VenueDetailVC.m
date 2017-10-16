@@ -117,6 +117,19 @@ typedef enum{
     self.phoneLabel.text = [NSString stringWithFormat:@"%@",[response valueForKey:@"phone"]];
     NSString *description = [NSString stringWithFormat:@"\n%@\n\n%@\n\n%@",[response valueForKey:@"description"],[response valueForKey:@"address"],[response valueForKey:@"email"]];
     self.venueDescriptionLabel.text = description;
+    NSString *startTimeString = [self getTimeInAmPmFormat:[response valueForKey:@"working_hours_start"]];
+     NSString *endTimeString = [self getTimeInAmPmFormat:[response valueForKey:@"working_hours_end"]];
+    self.timeLabel.text = [NSString stringWithFormat:@"OPEN: %@ - %@",startTimeString, endTimeString];
+}
+
+#pragma mark - Get Time In 24 Hours
+
+-(NSString *)getTimeInAmPmFormat:(NSString *)timeString{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"HH:mm:ss"];
+    NSDate *time = [dateFormatter dateFromString:timeString];
+    [dateFormatter setDateFormat:@"hh:mm a"];
+    return [dateFormatter stringFromDate:time];
 }
 
 -(void)populateOfferListWithOffersArray:(NSArray *)offersArray{
