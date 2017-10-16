@@ -11,4 +11,6 @@
 
 @interface VenueDetailVC : BaseViewController
 @property (nonatomic, strong) NSNumber *venueId;
+@property (nonatomic, strong) NSString *headingString;
+@property (nonatomic, strong) UIImage *image;
 @end

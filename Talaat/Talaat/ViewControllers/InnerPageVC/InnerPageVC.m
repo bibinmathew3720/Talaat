@@ -182,7 +182,8 @@ typedef enum{
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)venueDetail{
     VenueDetailVC *venueDetailPage = (VenueDetailVC *)segue.destinationViewController;
     venueDetailPage.venueId = [venueDetail valueForKey:@"id"];
-    
+    venueDetailPage.headingString = [[venueDetail valueForKey:@"name"] uppercaseString];
+    venueDetailPage.image = self.topImageView.image;
 }
 
 /*
