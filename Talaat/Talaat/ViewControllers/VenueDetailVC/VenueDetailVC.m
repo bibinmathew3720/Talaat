@@ -145,7 +145,7 @@ typedef enum{
 -(void)viewWillLayoutSubviews{
     if(self.isApiGetFired)
         [self settingBackGroundImages];
-    self.scrollView.frame = CGRectMake(0, 0, self.view.frame.size.width, TopViewHeight);
+    self.scrollView.frame = CGRectMake(0, -20, self.view.frame.size.width, TopViewHeight);
     self.scrollView.contentSize = CGSizeMake(self.imagesArray.count*self.view.frame.size.width, TopViewHeight);
 }
 
