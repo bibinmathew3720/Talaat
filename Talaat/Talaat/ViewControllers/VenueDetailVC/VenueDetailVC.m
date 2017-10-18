@@ -6,8 +6,13 @@
 //  Copyright © 2017 Talaat. All rights reserved.
 //
 
+#define VenueDataCVCIdentifier @"venueData"
+#define VenueOfferCVCIdentifier @"venueOffer"
+
 #define TopViewHeight 220
 #import "OfferCell.h"
+#import "VenueDataCVC.h"
+#import "VenueOfferCVC.h"
 
 #import <MapKit/MapKit.h>
 
@@ -16,18 +21,11 @@ typedef enum{
     PageTypeInfo,
     PageTypeOffers
 } PageType;
-@interface VenueDetailVC ()<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
+@interface VenueDetailVC ()<UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *infoUnderLineView;
 @property (weak, nonatomic) IBOutlet UIView *offerUndeLineView;
-@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
-@property (weak, nonatomic) IBOutlet UILabel *phoneLabel;
-@property (weak, nonatomic) IBOutlet UILabel *venueDescriptionLabel;
-@property (weak, nonatomic) IBOutlet UIView *infoView;
-@property (weak, nonatomic) IBOutlet UIView *offerView;
-@property (weak, nonatomic) IBOutlet UITableView *offerTableView;
-@property (weak, nonatomic) IBOutlet UILabel *noOffersLabel;
+@property (weak, nonatomic) IBOutlet UICollectionView *venueCollectionView;
 
-@property (nonatomic, assign) PageType pageType;
 @property (nonatomic, strong) NSArray *offersArray;
 @property (nonatomic, strong) NSArray *imagesArray;
 @property (nonatomic, strong) UIImageView *imageView;
@@ -40,6 +38,7 @@ typedef enum{
 @property (nonatomic, strong) NSString *latitude;
 @property (nonatomic, strong) NSString *longitude;
 @property (nonatomic,assign)int previousPage;
+@property (nonatomic, strong) id venueDetails;
 @end
 
 @implementation VenueDetailVC
@@ -51,42 +50,14 @@ typedef enum{
 }
 
 -(void)initialisation{
-    self.pageType = PageTypeInfo;
-    self.offerTableView.estimatedRowHeight = 60;
-    self.offerTableView.rowHeight = UITableViewAutomaticDimension;
     self.headingLabel.text = self.headingString;
     self.scrollView.contentInset = UIEdgeInsetsMake(0, 0, -80, 0);
+    self.venueCollectionView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - UITableView Datasources
-
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
-}
-
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    
-    return self.offersArray.count;
-}
-
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    OfferCell *offCell= (OfferCell *)[tableView dequeueReusableCellWithIdentifier:@"offerCell" forIndexPath:indexPath];
-    offCell.offerDetail = [self.offersArray objectAtIndex:indexPath.row];
-    return offCell;
-}
-
-#pragma mark - UITableView Dalegates
-
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return UITableViewAutomaticDimension;
-}
-
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 }
 
 #pragma mark - Get Venue Details Api
@@ -101,7 +72,9 @@ typedef enum{
         NSLog(@"Response Object:%@",responseObject);
         if([[[responseObject valueForKey:@"result"] valueForKey:@"response"] isEqualToString:@"success"]){
             self.isApiGetFired = YES;
+            self.venueDetails = [responseObject valueForKey:@"data"];
             [self populateInfoViewWithReponse:[responseObject valueForKey:@"data"]];
+            [self.venueCollectionView reloadData];
             [self populateOfferListWithOffersArray:[[responseObject valueForKey:@"data"] valueForKey:@"offers"]];
         }
         
@@ -114,39 +87,16 @@ typedef enum{
 
 -(void)populateInfoViewWithReponse:(id)response{
     self.phoneString = [NSString stringWithFormat:@"%@",[response valueForKey:@"phone"]];
-    self.phoneLabel.text = self.phoneString;
-    NSString *description = [NSString stringWithFormat:@"\n%@\n\n%@\n\n%@",[response valueForKey:@"description"],[response valueForKey:@"address"],[response valueForKey:@"email"]];
-    self.venueDescriptionLabel.text = description;
-    NSString *startTimeString = [self getTimeInAmPmFormat:[response valueForKey:@"working_hours_start"]];
-     NSString *endTimeString = [self getTimeInAmPmFormat:[response valueForKey:@"working_hours_end"]];
-    self.timeLabel.text = [NSString stringWithFormat:@"OPEN: %@ - %@",startTimeString, endTimeString];
     self.imagesArray = [response valueForKey:@"venue_images"];
     self.latitude = [NSString stringWithFormat:@"%@",[response valueForKey:@"latittude"]];
     self.longitude = [NSString stringWithFormat:@"%@",[response valueForKey:@"longitude"]];
 }
 
-#pragma mark - Get Time In 24 Hours
 
--(NSString *)getTimeInAmPmFormat:(NSString *)timeString{
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"HH:mm:ss"];
-    NSDate *time = [dateFormatter dateFromString:timeString];
-    [dateFormatter setDateFormat:@"hh:mm a"];
-    return [dateFormatter stringFromDate:time];
-}
 
 -(void)populateOfferListWithOffersArray:(NSArray *)offersArray{
-    NSUInteger offerCount = offersArray.count;
-    if(offerCount == 0){
-        self.offerTableView.hidden = YES;
-        self.noOffersLabel.hidden = NO;
-    }
-    else{
-        self.offerTableView.hidden = NO;
-        self.noOffersLabel.hidden = YES;
-        self.offersArray = offersArray;
-        [self.offerTableView reloadData];
-    }
+    self.offersArray = offersArray;
+    [self.venueCollectionView reloadData];
 }
 
 -(void)viewWillLayoutSubviews{
@@ -178,16 +128,6 @@ typedef enum{
         [self.imageView addSubview:gradientImageView];
     }
 }
-
--(void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
-    if(scrollView == self.scrollView){
-        CGFloat pageWidth = self.scrollView.frame.size.width;
-        float fractionalPage = self.scrollView.contentOffset.x / pageWidth;
-        NSInteger Oripage = lround(fractionalPage);
-        self.pageControl.currentPage = Oripage;
-    }
-}
 /*
 #pragma mark - Navigation
 
@@ -217,18 +157,82 @@ typedef enum{
 }
 
 - (IBAction)infoButtonAction:(UIButton *)sender {
-    self.pageType = PageTypeInfo;
-    self.infoUnderLineView.hidden = NO;
-    self.infoView.hidden = NO;
-    self.offerView.hidden = YES;
-    self.offerUndeLineView.hidden = YES;
+    [self settingInfoUnderLineView];
+   [self.venueCollectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
 }
 - (IBAction)offersButtonAction:(UIButton *)sender {
-    self.pageType = PageTypeOffers;
-    self.infoUnderLineView.hidden = YES;
-    self.infoView.hidden = YES;
-    self.offerView.hidden = NO;
-    self.offerUndeLineView.hidden = NO;
+    [self settingOfferUnderLineView];
+    [self.venueCollectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
 }
 
+
+#pragma mark - CollectionView Datasources
+
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+    return 1;
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return 2;
+}
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    UICollectionViewCell *cell;
+    if(indexPath.row == 0){
+        VenueDataCVC *venueDataCell = [collectionView dequeueReusableCellWithReuseIdentifier:VenueDataCVCIdentifier forIndexPath:indexPath];
+        venueDataCell.venueData = self.venueDetails;
+        cell = venueDataCell;
+    }
+    else if(indexPath.row == 1){
+        VenueOfferCVC *venueOfferCell = [collectionView dequeueReusableCellWithReuseIdentifier:VenueOfferCVCIdentifier forIndexPath:indexPath];
+        venueOfferCell.offersArray = self.offersArray;
+        cell = venueOfferCell;
+    }
+    return cell;
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
+    return 0;
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
+    return 0;
+}
+
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    return CGSizeMake(self.view.frame.size.width, collectionView.frame.size.height);
+}
+
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if(scrollView == self.scrollView){
+        CGFloat pageWidth = self.scrollView.frame.size.width;
+        float fractionalPage = self.scrollView.contentOffset.x / pageWidth;
+        NSInteger Oripage = lround(fractionalPage);
+        self.pageControl.currentPage = Oripage;
+    }
+    else{
+        CGFloat pageWidth = self.view.frame.size.width;
+        int fractionalPage = self.venueCollectionView.contentOffset.x / pageWidth;
+        if(self.previousPage != fractionalPage) {
+            self.previousPage= fractionalPage;
+            if(fractionalPage == 0){
+                [self settingInfoUnderLineView];
+            }
+            else if (fractionalPage == 1){
+                [self settingOfferUnderLineView];
+            }
+            [self.venueCollectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:fractionalPage inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
+        }
+    }
+}
+
+-(void)settingOfferUnderLineView{
+    self.infoUnderLineView.hidden = YES;
+    self.offerUndeLineView.hidden = NO;
+}
+-(void)settingInfoUnderLineView{
+    self.infoUnderLineView.hidden = NO;
+    self.offerUndeLineView.hidden = YES;
+}
 @end
