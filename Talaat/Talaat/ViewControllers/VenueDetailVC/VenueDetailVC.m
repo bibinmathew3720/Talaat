@@ -39,6 +39,7 @@ typedef enum{
 @property (nonatomic, strong) NSString *phoneString;
 @property (nonatomic, strong) NSString *latitude;
 @property (nonatomic, strong) NSString *longitude;
+@property (nonatomic,assign)int previousPage;
 @end
 
 @implementation VenueDetailVC
@@ -174,7 +175,7 @@ typedef enum{
         [self.imageView sd_setImageWithURL:[[self.imagesArray objectAtIndex:i] valueForKey:@"path"] placeholderImage:[UIImage imageNamed:PlaceholderImageName]];
         gradientImageView.image = [UIImage imageNamed:@"venueTopGradient"];
         [self.scrollView addSubview:self.imageView];
-        [self.scrollView addSubview:gradientImageView];
+        [self.imageView addSubview:gradientImageView];
     }
 }
 

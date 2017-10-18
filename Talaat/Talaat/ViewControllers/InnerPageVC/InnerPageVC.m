@@ -5,23 +5,26 @@
 //  Created by Bibin Mathew on 10/4/17.
 //  Copyright © 2017 Talaat. All rights reserved.
 //
+#define CollectionCellReuseIdentifier @"innerCell"
+
 #import "OfferCell.h"
 #import "VenueCell.h"
 #import "InnerPageVC.h"
 #import "VenueDetailVC.h"
+#import "InnerCVC.h"
 typedef enum{
     PageVenues,
     PageOffers
 } PageType;
-@interface InnerPageVC ()<UITableViewDataSource,UITableViewDelegate>
-@property (weak, nonatomic) IBOutlet UITableView *innerTableView;
+@interface InnerPageVC ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,InnerCVCDelegate>
 @property (nonatomic, assign) PageType pageType;
 @property (weak, nonatomic) IBOutlet UIView *venueUnderlineView;
 @property (weak, nonatomic) IBOutlet UIView *offerUnderLineView;
-@property (weak, nonatomic) IBOutlet UIView *contentView;
+@property (weak, nonatomic) IBOutlet UICollectionView *innerCollectionView;
 
 @property (nonatomic, strong) NSArray *venuesArray;
 @property (nonatomic, strong) NSArray *offersArray;
+@property (nonatomic,assign)int previousPage;
 @end
 
 @implementation InnerPageVC
@@ -34,8 +37,6 @@ typedef enum{
 
 -(void)initialisation{
     self.pageType = PageVenues;
-    self.innerTableView.estimatedRowHeight = 60;
-    self.innerTableView.rowHeight = UITableViewAutomaticDimension;
     if(self.type == EventTypeNightLife){
         self.titleLabel.text = @"NIGHTLIFE";
         self.topImageView.image = [UIImage imageNamed:@"nightLifeTopImage"];
@@ -48,6 +49,7 @@ typedef enum{
         self.titleLabel.text = @"NIGHTLIFE & DINE";
         self.topImageView.image = [UIImage imageNamed:@"nightLifeAnddDineImage"];
     }
+    self.innerCollectionView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -61,19 +63,31 @@ typedef enum{
     [self.navigationController popViewControllerAnimated:YES];
 }
 - (IBAction)venueButtonAction:(UIButton *)sender {
-    self.venueUnderlineView.hidden = NO;
-    self.offerUnderLineView.hidden = YES;
+    [self settingVenuUnderLineView];
     self.pageType = PageVenues;
-    [self.innerTableView reloadData];
-    [self callingGetAllVenuesApi];
+    [self.innerCollectionView reloadData];
+    if(self.venuesArray.count == 0)
+        [self callingGetAllVenuesApi];
+    [self moveToVenues];
 }
 
 - (IBAction)offerButtonAction:(UIButton *)sender {
+    [self settingOfferUnderLineView];
+    self.pageType = PageOffers;
+    [self.innerCollectionView reloadData];
+    if(self.offersArray.count == 0)
+        [self callingGetAllOffersApi];
+    [self moveToOffers];
+}
+
+-(void)settingOfferUnderLineView{
     self.venueUnderlineView.hidden = YES;
     self.offerUnderLineView.hidden = NO;
-    self.pageType = PageOffers;
-    [self.innerTableView reloadData];
-    [self callingGetAllOffersApi];
+}
+
+-(void)settingVenuUnderLineView{
+    self.venueUnderlineView.hidden = NO;
+    self.offerUnderLineView.hidden = YES;
 }
 
 - (IBAction)phoneButtonAction:(UIButton *)sender {
@@ -83,53 +97,71 @@ typedef enum{
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneNumber]];
 }
 
-#pragma mark - UITableView Datasources
+#pragma mark - CollectionView Datasources
 
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
     return 1;
 }
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    if(self.pageType == PageOffers)
-        return self.offersArray.count;
-    else
-        return self.venuesArray.count;
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return 2;
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell;
-    if(self.pageType == PageOffers){
-        OfferCell *offCell= (OfferCell *)[tableView dequeueReusableCellWithIdentifier:@"offerCell" forIndexPath:indexPath];
-        offCell.offerDetail = [self.offersArray objectAtIndex:indexPath.row];
-        cell= offCell;
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    InnerCVC *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CollectionCellReuseIdentifier forIndexPath:indexPath];
+    if(indexPath.row == 0){
+        cell.listType = ListVenues;
+        cell.dataArray = self.venuesArray;
     }
-    else{
-         VenueCell *venueCell= (VenueCell *)[tableView dequeueReusableCellWithIdentifier:@"venueCell" forIndexPath:indexPath];
-         venueCell.phoneButton.tag = indexPath.row;
-         venueCell.venueDetail = [self.venuesArray objectAtIndex:indexPath.row];
-         cell= venueCell;
+    else if(indexPath.row == 1){
+        cell.listType = ListOffers;
+        cell.dataArray = self.offersArray;
     }
+    cell.innerCVCDelegate = self;
     return cell;
 }
 
-#pragma mark - UITableView Dalegates
-
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return UITableViewAutomaticDimension;
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
+    return 0;
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    id venueDetail;
-    if(self.pageType == PageVenues){
-        venueDetail = [self.venuesArray objectAtIndex:indexPath.row];
-    }
-    else{
-        venueDetail = [[self.offersArray objectAtIndex:indexPath.row] valueForKey:@"venue"];
-    }
-    
-     [self performSegueWithIdentifier:@"toVenuDetailPage" sender:venueDetail];
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
+    return 0;
 }
 
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    return CGSizeMake(self.view.frame.size.width, collectionView.frame.size.height);
+}
+
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    CGFloat pageWidth = self.view.frame.size.width;
+    int fractionalPage = self.innerCollectionView.contentOffset.x / pageWidth;
+    if(self.previousPage != fractionalPage) {
+        self.previousPage= fractionalPage;
+        if(fractionalPage == 0){
+            self.pageType = PageVenues;
+            if(self.venuesArray.count == 0)
+                [self callingGetAllVenuesApi];
+        }
+        else if (fractionalPage == 1){
+            self.pageType = PageOffers;
+            if(self.offersArray.count == 0)
+                [self callingGetAllOffersApi];
+            [self settingOfferUnderLineView];
+        }
+       [self.innerCollectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:fractionalPage inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
+    }
+}
+
+-(void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView{
+    if(self.pageType == PageOffers){
+       
+    }
+    else if (self.pageType == PageVenues){
+         [self settingVenuUnderLineView];
+    }
+}
 #pragma mark - Get All Venues Api
 
 -(void)callingGetAllVenuesApi{
@@ -147,7 +179,7 @@ typedef enum{
         if([[[responseObject valueForKey:@"result"] valueForKey:@"response"] isEqualToString:@"success"]){
             self.venuesArray = [responseObject valueForKey:@"data"];
             if(self.pageType == PageVenues){
-                [self.innerTableView reloadData];
+                [self.innerCollectionView reloadData];
             }
         }
         
@@ -173,7 +205,7 @@ typedef enum{
         if([[[responseObject valueForKey:@"result"] valueForKey:@"response"] isEqualToString:@"success"]){
             self.offersArray = [responseObject valueForKey:@"data"];
             if(self.pageType == PageOffers){
-                [self.innerTableView reloadData];
+                [self.innerCollectionView reloadData];
             }
         }
         
@@ -189,6 +221,20 @@ typedef enum{
     venueDetailPage.venueId = [venueDetail valueForKey:@"id"];
     venueDetailPage.headingString = [[venueDetail valueForKey:@"name"] uppercaseString];
     venueDetailPage.image = self.topImageView.image;
+}
+
+-(void)moveToOffers{
+    [self.innerCollectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
+}
+
+-(void)moveToVenues{
+    [self.innerCollectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
+}
+
+#pragma mark - Inner Collection View Cell Delegate
+
+-(void)selectedVenue:(id)venueDetail{
+    [self performSegueWithIdentifier:@"toVenuDetailPage" sender:venueDetail];
 }
 
 /*
