@@ -9,6 +9,8 @@
 #define TopViewHeight 220
 #import "OfferCell.h"
 
+#import <MapKit/MapKit.h>
+
 #import "VenueDetailVC.h"
 typedef enum{
     PageTypeInfo,
@@ -29,12 +31,14 @@ typedef enum{
 @property (nonatomic, strong) NSArray *offersArray;
 @property (nonatomic, strong) NSArray *imagesArray;
 @property (nonatomic, strong) UIImageView *imageView;
-@property (nonatomic, strong) NSString *phoneString;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UILabel *headingLabel;
 @property (nonatomic, assign) BOOL isApiGetFired;
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 
+@property (nonatomic, strong) NSString *phoneString;
+@property (nonatomic, strong) NSString *latitude;
+@property (nonatomic, strong) NSString *longitude;
 @end
 
 @implementation VenueDetailVC
@@ -116,6 +120,8 @@ typedef enum{
      NSString *endTimeString = [self getTimeInAmPmFormat:[response valueForKey:@"working_hours_end"]];
     self.timeLabel.text = [NSString stringWithFormat:@"OPEN: %@ - %@",startTimeString, endTimeString];
     self.imagesArray = [response valueForKey:@"venue_images"];
+    self.latitude = [NSString stringWithFormat:@"%@",[response valueForKey:@"latittude"]];
+    self.longitude = [NSString stringWithFormat:@"%@",[response valueForKey:@"longitude"]];
 }
 
 #pragma mark - Get Time In 24 Hours
@@ -199,6 +205,10 @@ typedef enum{
 }
 
 - (IBAction)locationButtonAction:(UIButton *)sender {
+    NSString *urlString = [NSString stringWithFormat:@"http://maps.apple.com/?ll=%@,%@",self.latitude,self.longitude];
+    if( ![[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]] ){
+        
+    }
 }
 
 - (IBAction)backButtonAction:(UIButton *)sender {

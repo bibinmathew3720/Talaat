@@ -186,7 +186,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ye1-ki-1xf">
-                                <rect key="frame" x="20" y="160" width="335" height="487"/>
+                                <rect key="frame" x="20" y="217" width="335" height="430"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="51c-2J-aYh">
                                         <rect key="frame" x="0.0" y="0.0" width="167.5" height="43"/>
@@ -270,7 +270,7 @@
                                         </constraints>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ooj-DN-XPA">
-                                        <rect key="frame" x="0.0" y="64" width="335" height="423"/>
+                                        <rect key="frame" x="0.0" y="44" width="335" height="386"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="offerCell" rowHeight="120" id="vcW-OK-qyY" customClass="OfferCell">
@@ -386,7 +386,7 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="zgS-fS-56v" secondAttribute="trailing" id="36q-6D-GgM"/>
                                     <constraint firstAttribute="bottom" secondItem="Ooj-DN-XPA" secondAttribute="bottom" id="4VL-WF-KLw"/>
-                                    <constraint firstItem="Ooj-DN-XPA" firstAttribute="top" secondItem="zgS-fS-56v" secondAttribute="bottom" constant="20" id="BOp-Kd-WRk"/>
+                                    <constraint firstItem="Ooj-DN-XPA" firstAttribute="top" secondItem="zgS-fS-56v" secondAttribute="bottom" id="BOp-Kd-WRk"/>
                                     <constraint firstItem="Q4M-99-V3D" firstAttribute="leading" secondItem="51c-2J-aYh" secondAttribute="trailing" id="Jhr-JB-eMT"/>
                                     <constraint firstItem="Ooj-DN-XPA" firstAttribute="leading" secondItem="ye1-ki-1xf" secondAttribute="leading" id="Oih-yQ-V3g"/>
                                     <constraint firstItem="51c-2J-aYh" firstAttribute="width" secondItem="Q4M-99-V3D" secondAttribute="width" id="VNb-bD-xVy"/>
@@ -403,7 +403,6 @@
                         </subviews>
                         <color key="backgroundColor" red="0.10196078431372549" green="0.11764705882352941" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ye1-ki-1xf" firstAttribute="top" secondItem="iP2-e0-ObO" secondAttribute="bottom" constant="-100" id="8QR-Pa-edG"/>
                             <constraint firstItem="avG-kI-Cz7" firstAttribute="centerY" secondItem="6tM-xc-fAb" secondAttribute="centerY" id="8h1-HL-4qd"/>
                             <constraint firstItem="iP2-e0-ObO" firstAttribute="top" secondItem="BId-ik-fqp" secondAttribute="top" constant="-20" id="9lR-0d-6DN"/>
                             <constraint firstItem="iP2-e0-ObO" firstAttribute="leading" secondItem="BId-ik-fqp" secondAttribute="leading" id="CCZ-9E-HmL"/>
@@ -416,6 +415,7 @@
                             <constraint firstItem="BId-ik-fqp" firstAttribute="trailing" secondItem="iP2-e0-ObO" secondAttribute="trailing" id="luS-bf-dOq"/>
                             <constraint firstItem="ye1-ki-1xf" firstAttribute="leading" secondItem="BId-ik-fqp" secondAttribute="leading" constant="20" id="pPe-DW-MUF"/>
                             <constraint firstItem="VFM-O8-Dox" firstAttribute="leading" secondItem="BId-ik-fqp" secondAttribute="leading" id="qUB-R8-e8e"/>
+                            <constraint firstItem="ye1-ki-1xf" firstAttribute="top" secondItem="iP2-e0-ObO" secondAttribute="bottom" constant="-43" id="sRE-42-D8K"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BId-ik-fqp"/>
                     </view>
