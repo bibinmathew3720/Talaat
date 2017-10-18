@@ -119,10 +119,15 @@ typedef enum{
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    id venueDetail;
     if(self.pageType == PageVenues){
-        id venueDetail = [self.venuesArray objectAtIndex:indexPath.row];
-        [self performSegueWithIdentifier:@"toVenuDetailPage" sender:venueDetail];
+        venueDetail = [self.venuesArray objectAtIndex:indexPath.row];
     }
+    else{
+        venueDetail = [[self.offersArray objectAtIndex:indexPath.row] valueForKey:@"venue"];
+    }
+    
+     [self performSegueWithIdentifier:@"toVenuDetailPage" sender:venueDetail];
 }
 
 #pragma mark - Get All Venues Api
