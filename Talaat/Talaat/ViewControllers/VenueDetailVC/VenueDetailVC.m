@@ -37,6 +37,7 @@ typedef enum{
 @property (nonatomic, strong) NSString *phoneString;
 @property (nonatomic, strong) NSString *latitude;
 @property (nonatomic, strong) NSString *longitude;
+@property (nonatomic, strong) NSString *address;
 @property (nonatomic,assign)int previousPage;
 @property (nonatomic, strong) id venueDetails;
 @end
@@ -90,6 +91,7 @@ typedef enum{
     self.imagesArray = [response valueForKey:@"venue_images"];
     self.latitude = [NSString stringWithFormat:@"%@",[response valueForKey:@"latittude"]];
     self.longitude = [NSString stringWithFormat:@"%@",[response valueForKey:@"longitude"]];
+    self.address = [NSString stringWithFormat:@"%@",[response valueForKey:@"address"]];
 }
 
 
@@ -146,10 +148,27 @@ typedef enum{
 }
 
 - (IBAction)locationButtonAction:(UIButton *)sender {
-    NSString *urlString = [NSString stringWithFormat:@"http://maps.apple.com/?ll=%@,%@",self.latitude,self.longitude];
-    if( ![[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]] ){
-        
-    }
+    [self loadMapWithCoordinates:self.latitude andLongitude:self.longitude];
+//    NSString *urlString = [NSString stringWithFormat:@"http://maps.apple.com/?saddr=%@,%@",self.latitude,self.longitude];
+//    if( ![[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]] ){
+//
+//    }
+}
+
+-(void)loadMapWithCoordinates:(NSString *)lat andLongitude:(NSString *)lon{
+    CLLocationCoordinate2D endingCoord = CLLocationCoordinate2DMake([lat doubleValue], [lon doubleValue]);
+    MKPlacemark *endLocation = [[MKPlacemark alloc] initWithCoordinate:endingCoord addressDictionary:nil];
+    MKMapItem *endingItem = [[MKMapItem alloc] initWithPlacemark:endLocation];
+    
+    NSMutableDictionary *launchOptions = [[NSMutableDictionary alloc] init];
+    [launchOptions setObject:MKLaunchOptionsDirectionsModeDriving forKey:MKLaunchOptionsDirectionsModeKey];
+    endingItem.name = self.address;
+    [endingItem openInMapsWithLaunchOptions:nil];
+//    let coordinates = CLLocationCoordinate2DMake(29.2745571, 47.8433472)
+//    let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+//    let mapItem = MKMapItem(placemark: placemark)
+//    mapItem.name = self.name
+//    mapItem.openInMaps(launchOptions: nil)
 }
 
 - (IBAction)backButtonAction:(UIButton *)sender {
