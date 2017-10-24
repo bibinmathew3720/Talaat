@@ -156,19 +156,25 @@ typedef enum{
 }
 
 -(void)loadMapWithCoordinates:(NSString *)lat andLongitude:(NSString *)lon{
-    CLLocationCoordinate2D endingCoord = CLLocationCoordinate2DMake([lat doubleValue], [lon doubleValue]);
-    MKPlacemark *endLocation = [[MKPlacemark alloc] initWithCoordinate:endingCoord addressDictionary:nil];
-    MKMapItem *endingItem = [[MKMapItem alloc] initWithPlacemark:endLocation];
-    
-    NSMutableDictionary *launchOptions = [[NSMutableDictionary alloc] init];
-    [launchOptions setObject:MKLaunchOptionsDirectionsModeDriving forKey:MKLaunchOptionsDirectionsModeKey];
-    endingItem.name = self.address;
-    [endingItem openInMapsWithLaunchOptions:nil];
-//    let coordinates = CLLocationCoordinate2DMake(29.2745571, 47.8433472)
-//    let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
-//    let mapItem = MKMapItem(placemark: placemark)
-//    mapItem.name = self.name
-//    mapItem.openInMaps(launchOptions: nil)
+    BOOL canHandle = [[UIApplication sharedApplication] canOpenURL: [NSURL URLWithString:@"comgooglemaps://"]];
+   // if(canHandle){
+        NSString *locationString = [NSString stringWithFormat:@"%@,%@",lat,lon];
+    NSString *urlString = [NSString stringWithFormat:@"http://maps.google.com/maps?q=%@",locationString];
+    [[UIApplication sharedApplication]openURL:[NSURL URLWithString:urlString]];
+//        NSString *url = [NSString stringWithFormat: @"http://maps.google.com/maps?ll=%@",
+//                         [locationString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+       // [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+//    }
+//    else{
+//        CLLocationCoordinate2D endingCoord = CLLocationCoordinate2DMake([lat doubleValue], [lon doubleValue]);
+//        MKPlacemark *endLocation = [[MKPlacemark alloc] initWithCoordinate:endingCoord addressDictionary:nil];
+//        MKMapItem *endingItem = [[MKMapItem alloc] initWithPlacemark:endLocation];
+//
+//        NSMutableDictionary *launchOptions = [[NSMutableDictionary alloc] init];
+//        [launchOptions setObject:MKLaunchOptionsDirectionsModeDriving forKey:MKLaunchOptionsDirectionsModeKey];
+//        endingItem.name = self.address;
+//        [endingItem openInMapsWithLaunchOptions:nil];
+//    }
 }
 
 - (IBAction)backButtonAction:(UIButton *)sender {

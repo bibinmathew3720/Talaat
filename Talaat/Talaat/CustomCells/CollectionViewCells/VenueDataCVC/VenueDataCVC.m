@@ -7,8 +7,16 @@
 //
 
 #import "VenueDataCVC.h"
-
+@interface VenueDataCVC()
+@property (weak, nonatomic) IBOutlet UIView *infoCornerView;
+@end
 @implementation VenueDataCVC
+
+-(void)awakeFromNib{
+    [super awakeFromNib];
+    self.infoCornerView.layer.borderWidth = 1;
+    self.infoCornerView.layer.borderColor = [[UIColor whiteColor] CGColor];
+}
 
 -(void)setVenueData:(id)venueData{
     if(venueData!=nil){
