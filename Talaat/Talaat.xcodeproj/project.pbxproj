@@ -477,7 +477,7 @@
 				TargetAttributes = {
 					D0013BC31F8206120027BD20 = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					D0013BDB1F8206120027BD20 = {
 						CreatedOnToolsVersion = 9.0;
@@ -860,18 +860,18 @@
 			baseConfigurationReference = CA4C509A03D898AEA73A4579 /* Pods-Talaat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WVYK59KXPF;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = UYX6YGMR5K;
 				ENABLE_BITCODE = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Talaat/Talaat-Prefix.pch";
 				INFOPLIST_FILE = Talaat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.talaat.iOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.talaatqatar.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "284070b4-6fb4-4e1a-9218-a66e9c81f626";
+				PROVISIONING_PROFILE_SPECIFIER = prov_appstore_talaat;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -881,18 +881,18 @@
 			baseConfigurationReference = 83538F445863117F41837E66 /* Pods-Talaat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WVYK59KXPF;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = UYX6YGMR5K;
 				ENABLE_BITCODE = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Talaat/Talaat-Prefix.pch";
 				INFOPLIST_FILE = Talaat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.talaat.iOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.talaatqatar.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "284070b4-6fb4-4e1a-9218-a66e9c81f626";
+				PROVISIONING_PROFILE_SPECIFIER = prov_appstore_talaat;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
