@@ -414,16 +414,25 @@
                                                         <outlet property="delegate" destination="z70-cp-hZn" id="9af-LE-bDU"/>
                                                     </connections>
                                                 </tableView>
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2N6-Ru-z3x">
+                                                    <rect key="frame" x="166" y="177" width="43" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="18"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </view>
                                         <constraints>
+                                            <constraint firstItem="2N6-Ru-z3x" firstAttribute="centerY" secondItem="z70-cp-hZn" secondAttribute="centerY" id="1Ya-gZ-3KS"/>
                                             <constraint firstItem="Ooj-DN-XPA" firstAttribute="leading" secondItem="z70-cp-hZn" secondAttribute="leading" constant="20" id="5JV-Q9-RgV"/>
                                             <constraint firstItem="Ooj-DN-XPA" firstAttribute="top" secondItem="z70-cp-hZn" secondAttribute="top" id="6aT-Th-aKf"/>
+                                            <constraint firstItem="2N6-Ru-z3x" firstAttribute="centerX" secondItem="z70-cp-hZn" secondAttribute="centerX" id="Hw7-pN-7fs"/>
                                             <constraint firstAttribute="bottom" secondItem="Ooj-DN-XPA" secondAttribute="bottom" id="RJ8-FV-TLw"/>
                                             <constraint firstAttribute="trailing" secondItem="Ooj-DN-XPA" secondAttribute="trailing" constant="20" id="aAU-s8-Kra"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="innerTableView" destination="Ooj-DN-XPA" id="SB5-ZP-gvY"/>
+                                            <outlet property="noItemsLabel" destination="2N6-Ru-z3x" id="yfk-TJ-ZbN"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

@@ -16,6 +16,7 @@ typedef enum{
 @interface InnerCVC : UICollectionViewCell
 @property (nonatomic, assign) ListType listType;
 @property (nonatomic, strong) NSArray *dataArray;
+@property (weak, nonatomic) IBOutlet UILabel *noItemsLabel;
 @property (weak, nonatomic) IBOutlet UITableView *innerTableView;
 @property (nonatomic, assign) id <InnerCVCDelegate>innerCVCDelegate;
 @end

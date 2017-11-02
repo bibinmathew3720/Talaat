@@ -27,7 +27,19 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-   
+    NSUInteger itemCount = self.currentDataArray.count;
+    if(itemCount==0){
+         self.noItemsLabel.hidden = NO;
+        if(self.currentListType == ListOffers){
+            self.noItemsLabel.text = @"No offers available";
+        }
+        else{
+            self.noItemsLabel.text = @"No venues available";
+        }
+    }
+    else{
+        self.noItemsLabel.hidden = YES;
+    }
         return self.currentDataArray.count;
 }
 
